@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33801.198
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "FlatFiles_Hiona", "FlatFiles_Hiona\FlatFiles_Hiona.dtproj", "{60BF89E2-3E17-4DBA-B5C7-98ADF63B4494}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60BF89E2-3E17-4DBA-B5C7-98ADF63B4494}.Development|Default.ActiveCfg = Development
+		{60BF89E2-3E17-4DBA-B5C7-98ADF63B4494}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76EEAB5F-05AD-4196-96D2-6CF8882DAE15}
+	EndGlobalSection
+EndGlobal
