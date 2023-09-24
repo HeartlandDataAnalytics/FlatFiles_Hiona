@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="StockCo"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{01049FE3-A78E-43F0-8F73-4EC3F60A0E1F}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{2F9BFE7C-0544-4AE3-8D26-8B46BA4B3401}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -540,22 +540,6 @@
       </DTS:ForEachEnumerator>
       <DTS:Variables />
       <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Foreach Loop Container\Execute SQL Task"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{1320ED0A-471E-4E58-9480-C118A69E02CF}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Execute SQL Task"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
-              SQLTask:SqlStatementSource="truncate table dbo.stockco_Marac;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container\FileToStage"
           DTS:CreationName="Microsoft.Pipeline"
@@ -1970,7 +1954,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[FILE_NAME]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="17"
                           cachedName="FILE_NAME"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]" />
@@ -1983,7 +1967,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[SOURCE]"
                           cachedDataType="wstr"
-                          cachedLength="20"
+                          cachedLength="3"
                           cachedName="SOURCE"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[RecordSource]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[SOURCE]" />
@@ -4421,6 +4405,22 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Truncate Stage Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{1320ED0A-471E-4E58-9480-C118A69E02CF}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Stage Table"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
+              SQLTask:SqlStatementSource="truncate table dbo.stockco_Marac;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
           DTS:refId="Package\Foreach Loop Container\UpdateLog-StageIngestCount"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
@@ -4507,7 +4507,7 @@
           DTS:From="Package\Foreach Loop Container\UpdateLog-StartFileIngest"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\Foreach Loop Container\Execute SQL Task" />
+          DTS:To="Package\Foreach Loop Container\Truncate Stage Table" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
@@ -4536,7 +4536,7 @@
           DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 4]"
           DTS:CreationName=""
           DTS:DTSID="{FDD3D4AC-ECDB-4E51-BA8C-E2E10EF43FE0}"
-          DTS:From="Package\Foreach Loop Container\Execute SQL Task"
+          DTS:From="Package\Foreach Loop Container\Truncate Stage Table"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 4"
           DTS:To="Package\Foreach Loop Container\FileToStage" />
@@ -4552,8 +4552,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{775D8CF7-838D-446F-B293-623E9DD916EF}"
-          DTS:ObjectName="{775D8CF7-838D-446F-B293-623E9DD916EF}"
+          DTS:DTSID="{76A7248E-3B23-4DF8-A285-E8BCE5726D89}"
+          DTS:ObjectName="{76A7248E-3B23-4DF8-A285-E8BCE5726D89}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::SourceFileName" />
       </DTS:ForEachVariableMappings>
@@ -4573,8 +4573,8 @@
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163,42"
-          Id="Package\Foreach Loop Container\Execute SQL Task"
-          TopLeft="85,112" />
+          Id="Package\Foreach Loop Container\Truncate Stage Table"
+          TopLeft="179,118" />
         <NodeLayout
           Size="134,42"
           Id="Package\Foreach Loop Container\FileToStage"
@@ -4605,26 +4605,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-110.681818181818,46.2727272727273"
+              EndConnector="-16.6818181818182,52.2727272727273"
               Start="0,0"
-              End="-110.681818181818,38.7727272727273">
+              End="-16.6818181818182,44.7727272727273">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.1363636363636" />
+                    End="0,22.1363636363636" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.1363636363636"
-                    Point2="0,23.1363636363636"
-                    Point3="-4,23.1363636363636" />
+                    Point1="0,22.1363636363636"
+                    Point2="0,26.1363636363636"
+                    Point3="-4,26.1363636363636" />
                   <mssgle:LineSegment
-                    End="-106.681818181818,23.1363636363636" />
+                    End="-12.6818181818182,26.1363636363636" />
                   <mssgle:CubicBezierSegment
-                    Point1="-106.681818181818,23.1363636363636"
-                    Point2="-110.681818181818,23.1363636363636"
-                    Point3="-110.681818181818,27.1363636363636" />
+                    Point1="-12.6818181818182,26.1363636363636"
+                    Point2="-16.6818181818182,26.1363636363636"
+                    Point3="-16.6818181818182,30.1363636363636" />
                   <mssgle:LineSegment
-                    End="-110.681818181818,38.7727272727273" />
+                    End="-16.6818181818182,44.7727272727273" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4737,30 +4737,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 4]"
-          TopLeft="166.5,154">
+          TopLeft="262.226190314001,160">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="97.452380628002,38.019607857437"
+              EndConnector="0,32.019607857437"
               Start="0,0"
-              End="97.452380628002,30.519607857437">
+              End="0,24.519607857437">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.0098039287185" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.0098039287185"
-                    Point2="0,19.0098039287185"
-                    Point3="4,19.0098039287185" />
-                  <mssgle:LineSegment
-                    End="93.452380628002,19.0098039287185" />
-                  <mssgle:CubicBezierSegment
-                    Point1="93.452380628002,19.0098039287185"
-                    Point2="97.452380628002,19.0098039287185"
-                    Point3="97.452380628002,23.0098039287185" />
-                  <mssgle:LineSegment
-                    End="97.452380628002,30.519607857437" />
+                    End="0,24.519607857437" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4956,7 +4944,7 @@
     design-time-name="Package\Foreach Loop Container\StageToTarget">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="131,42"
           Id="Package\Foreach Loop Container\StageToTarget\StageTable"
@@ -4996,9 +4984,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
