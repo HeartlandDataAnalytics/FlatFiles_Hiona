@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">AUKBIJUMP01</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgVVCZr5mNkmkB3eNmqT+6wAAAAACAAAAAAADZgAAwAAAABAAAADzwOJpjr4HIakAX6ipFalPAAAAAASAAACgAAAAEAAAALSeDetf7zXU13VO7oii+c6IAAAATYc8IVzx64eyzmJ1Lcjxkauf1I0z0xA0OikDdHC7IBwl24rF7wqUU5WcrpRVKmlfeyxNmxumzd0kT9KtjXkVL7dOcl8AfexIMpiT5YpnS/43niQr/tWw+DUcdgHyZGG1/76Qr0d1ZtoN9YqtBpZ/g86wxNyghs8Vxz8k0yTboHoHhbX039x9ORQAAAC3s+NR8H46sg5SSpbqZMZJsT0Djw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgVVCZr5mNkmkB3eNmqT+6wAAAAACAAAAAAADZgAAwAAAABAAAACBx16RR41MNZU9DICL+w4EAAAAAASAAACgAAAAEAAAAJbWKI86GPxUH6bxxD9kYEqIAAAAP4+CCdU+5CI5NGnokdZ2wsO2ZguZD0W67mghAXsCkF5cuz+03saQeZCtp91tU5XG6RQKPgY8ROXSAxDKeqqOMPv0wRHTalYDH0a901PQRBmUbIs9GLMYtR+AtAcIbRpjIgekSGr3fNfhJmV8luwdkCzDt5oeJDsn/Tfs8xkE7s+gMPeDdh+B0BQAAAD8ujfIwCOG322z6t7zcXWfcfhVTQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,7 +35,6 @@
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="AUKSQLPROD01.SNFLK_STAGE.conmgr" />
-          <SSIS:ConnectionManager SSIS:Name="StockCo_FlatFile.conmgr" />
         </SSIS:ConnectionManagers>
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters>
@@ -157,203 +156,6 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.AlwaysCheckForRowDelimiters">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.CodePage">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.ColumnNamesInFirstDataRow">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.ConnectByProxy">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.ConnectionString">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">\\auksqlprod01\ETL\PROD\FILES\IMPORT\StockCo\Marac20230921.txt</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.DataRowsToSkip">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.Format">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Delimited</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.HeaderRowDelimiter">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property xml:space="preserve" SSIS:Name="Value">
-</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.HeaderRowsToSkip">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.LocaleID">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">5129</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.RowDelimiter">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.TextQualifier">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">&lt;none&gt;</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.Unicode">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="CreationName">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
-                <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
-              </SSIS:Properties>
-            </SSIS:Parameter>
           </SSIS:ProjectConnectionParameters>
           <SSIS:PackageInfo>
             <SSIS:PackageMetaData SSIS:Name="Harmoney_Cash.dtsx">
@@ -379,10 +181,10 @@
                 <SSIS:Property SSIS:Name="Name">StockCo</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">26</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{DCF57C84-0BA1-40BB-9B7D-7CA3181BAEE6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5DD79BAB-B1D5-4B0C-9D1E-6B818DC2C7AF}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -489,6 +291,186 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.AlwaysCheckForRowDelimiters">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.CodePage">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.ColumnNamesInFirstDataRow">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">true</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.ConnectByProxy">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.DataRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.Format">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Delimited</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.HeaderRowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property xml:space="preserve" SSIS:Name="Value">
+</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.HeaderRowsToSkip">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.LocaleID">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">5129</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.RowDelimiter">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.TextQualifier">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">&lt;none&gt;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.StockCo_FlatFile.Unicode">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>

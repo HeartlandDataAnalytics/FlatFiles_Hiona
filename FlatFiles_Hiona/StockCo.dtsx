@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="StockCo"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{A7E5E077-F206-4C71-945C-A28356AEBA87}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{79909250-33A3-4779-80B4-E736CC15C502}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -24,6 +24,401 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=AUKSQLPROD01;Integrated Security=SSPI;Connect Timeout=30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[StockCo_FlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D3D44D71-66BC-4E00-8A34-498E5C36A3B2}"
+      DTS:ObjectName="StockCo_FlatFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFullPathName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5129"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\STOCKCO\Marac19000101.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Contract"
+              DTS:DTSID="{CC7F2F14-526C-49EB-B371-1F8B680AB68F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client Number"
+              DTS:DTSID="{F7E26738-7C8D-4731-A3D3-CB3522C2D980}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="161"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client Name"
+              DTS:DTSID="{6159C258-7911-4CD9-B00C-898E2DA1F956}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product Code"
+              DTS:DTSID="{B88C118F-9DEF-467F-BC11-17E2C5F5D074}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Verified Date"
+              DTS:DTSID="{56D420CA-885B-4CE0-950B-23E1F568AECA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Maturity Date"
+              DTS:DTSID="{09722864-40B4-4D65-9D18-2467C8FB74E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cost Centre Code"
+              DTS:DTSID="{3957EB51-F2E1-4300-8608-6B1BDB982F5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Account Status"
+              DTS:DTSID="{EC7B943E-F32C-453D-8298-753F39BEFE00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{8705CB33-EC9A-4ED9-942E-F7028311FC7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="New Advances"
+              DTS:DTSID="{BC5E7BF7-52DC-400E-A2EB-46DECD26A893}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Refinancing"
+              DTS:DTSID="{EF3C2500-9C1E-4734-8D5D-989AFD14F6A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Exposure"
+              DTS:DTSID="{666348D1-6A54-430B-8203-194E6B50B181}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Industry"
+              DTS:DTSID="{B643691A-06DF-4CAD-BC50-C5EEBCA694F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Occupation"
+              DTS:DTSID="{310B394D-084F-4FB4-A089-B7B858869A8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Credit Limit"
+              DTS:DTSID="{3AE06392-C050-4227-AC98-8E0A18FD1ADC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Rate"
+              DTS:DTSID="{BC14624E-1B40-45DC-A56E-2EBD9947D5AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Earning Rate"
+              DTS:DTSID="{68DE1774-A963-4228-9375-CCE629777D7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Balance"
+              DTS:DTSID="{41ACA4FC-6D3C-4080-A1A7-FEA1DAFD309E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Balance Past RRD"
+              DTS:DTSID="{033A5C13-757E-4860-8D8D-179148ADC66D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Days Past RRD"
+              DTS:DTSID="{BA671C48-E21D-4636-AB45-A75C6ED0D77F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="19"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{65AFFD0E-A62C-4507-AA09-9887D7D18CE8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Client Type"
+              DTS:DTSID="{EFDDCDF1-20A0-4D52-9B4D-651131F27F23}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Interest Classification"
+              DTS:DTSID="{BC8A527B-1D28-4AB4-A03F-F0EF6D02D439}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Next Credit Review Date"
+              DTS:DTSID="{6C1B9CF6-310B-48E4-AC19-BA2CA11B8D0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rate Review Date"
+              DTS:DTSID="{B231A127-955B-4BA2-BF7A-D13B85145841}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="19"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Security Location"
+              DTS:DTSID="{84D62C11-988F-4C63-BE43-67EC55F40D94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="9"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Security Category"
+              DTS:DTSID="{59402AFA-D859-418E-A1B4-77AECA99D16C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="27"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Originator"
+              DTS:DTSID="{44565FEE-82DE-466C-B200-16C022588D83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Risk Grade"
+              DTS:DTSID="{500F6613-F449-486B-B8BC-7CA91E4D2BC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Risk Grade Date Updated"
+              DTS:DTSID="{4F7DC4F2-9E9A-49FD-81BC-84AF8AD63997}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANZIC"
+              DTS:DTSID="{4F16C6CB-595C-403D-AABE-357F51F04F77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Post Code"
+              DTS:DTSID="{A2B12178-2E90-4DFC-84E9-2037052A2CAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Accrued Income"
+              DTS:DTSID="{1CFAD77A-D9AF-4B4E-A3DC-576AF571F97D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Capatilised Credit Limit"
+              DTS:DTSID="{208D727B-F87D-4332-A530-14D28B93B396}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Days in Arrears"
+              DTS:DTSID="{6E3026C1-065D-4C38-927B-16E0757882D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="P1"
+              DTS:DTSID="{7C864776-C299-42C2-ABEA-9D7827C36333}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="P2"
+              DTS:DTSID="{57846D0C-7D28-4C62-AAE6-00C34DA34085}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="M"
+              DTS:DTSID="{84B5C67C-AE69-47A9-BA03-BC0AA69CA7A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="M1"
+              DTS:DTSID="{556DE38F-D90F-4A81-9EE4-A8FF887C25DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="M2"
+              DTS:DTSID="{0BBA7A04-4D2C-4995-ABC3-9E90102DEF04}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="M3"
+              DTS:DTSID="{D43C2129-0D95-4B2C-9101-18991302240F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NP1"
+              DTS:DTSID="{C538E542-54AD-4C84-B5B9-EBD788BB7854}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NP2"
+              DTS:DTSID="{8D6F5B29-A3DC-49B5-8C4B-039DD44EAAB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NP3"
+              DTS:DTSID="{4271A130-5478-4208-9DEE-F33B90900565}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NP4"
+              DTS:DTSID="{7D7D7340-9F64-4F70-8B0D-701EBA398E8D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -124,10 +519,21 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
-        DTS:CreationName="Microsoft.ForEachItemEnumerator"
-        DTS:DTSID="{7531DA10-7C7E-41B0-A019-72F135AA415F}"
-        DTS:ObjectName="{7531DA10-7C7E-41B0-A019-72F135AA415F}">
-        <DTS:ObjectData />
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{A1DE52FF-9ADF-4CD3-8AEF-26DA75DCA52C}"
+        DTS:ObjectName="{A1DE52FF-9ADF-4CD3-8AEF-26DA75DCA52C}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="\\AUKSQLPROD01\ETL\PROD\FILES\IMPORT\StockCo" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
       </DTS:ForEachEnumerator>
       <DTS:Variables />
       <DTS:Executables>
@@ -175,93 +581,54 @@
                       <inputColumns>
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Contract]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="i2"
                           cachedName="Contract"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Client Number]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="i2"
                           cachedName="Client Number"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Client Number]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Client Name]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="161"
                           cachedName="Client Name"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Client Name]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Product Code]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="13"
                           cachedName="Product Code"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Product Code]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Verified Date]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Verified Date"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Verified Date]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Maturity Date]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Maturity Date"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Maturity Date]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Cost Centre Code]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="5"
                           cachedName="Cost Centre Code"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Cost Centre Code]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Account Status]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="7"
                           cachedName="Account Status"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Account Status]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Channel]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="13"
                           cachedName="Channel"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Channel]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[New Advances]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="New Advances"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[New Advances]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Refinancing]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Refinancing"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinancing]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Exposure]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Exposure"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Exposure]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Industry]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="20"
                           cachedName="Industry"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Industry]" />
                         <inputColumn
@@ -271,48 +638,6 @@
                           cachedLength="50"
                           cachedName="Occupation"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Occupation]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Credit Limit]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Credit Limit"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Limit]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Customer Rate]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Customer Rate"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Rate]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Earning Rate]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Earning Rate"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Earning Rate]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Balance]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Balance"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Balance Past RRD]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Balance Past RRD"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance Past RRD]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Days Past RRD]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Days Past RRD"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days Past RRD]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Region]"
                           cachedCodepage="1252"
@@ -331,23 +656,9 @@
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Interest Classification]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="20"
                           cachedName="Interest Classification"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Interest Classification]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Next Credit Review Date]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Next Credit Review Date"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Next Credit Review Date]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Rate Review Date]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Rate Review Date"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Rate Review Date]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Security Location]"
                           cachedCodepage="1252"
@@ -359,7 +670,7 @@
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Security Category]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="20"
                           cachedName="Security Category"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Security Category]" />
                         <inputColumn
@@ -371,121 +682,74 @@
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Originator]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Risk Grade]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="i1"
                           cachedName="Risk Grade"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Risk Grade Date Updated]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="date"
                           cachedName="Risk Grade Date Updated"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade Date Updated]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[ANZIC]"
                           cachedCodepage="1252"
                           cachedDataType="str"
-                          cachedLength="50"
+                          cachedLength="5"
                           cachedName="ANZIC"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[ANZIC]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Post Code]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="i2"
                           cachedName="Post Code"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Post Code]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Accrued Income]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Accrued Income"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Accrued Income]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Capatilised Credit Limit]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Capatilised Credit Limit"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Capatilised Credit Limit]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[Days in Arrears]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Days in Arrears"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days in Arrears]" />
-                        <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[P1]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="P1"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[P1]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[P2]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="P2"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[P2]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[M]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="M"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[M1]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="M1"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M1]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[M2]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="M2"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M2]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[M3]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="M3"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M3]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[NP1]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="NP1"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP1]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[NP2]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="NP2"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP2]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[NP3]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="NP3"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP3]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Inputs[Data Conversion Input].Columns[NP4]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
+                          cachedDataType="r4"
                           cachedName="NP4"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP4]" />
                       </inputColumns>
@@ -584,46 +848,6 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Verified Date]"
-                          dataType="date"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Verified Date]"
-                          name="Verified Date"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Verified Date]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Maturity Date]"
-                          dataType="date"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Maturity Date]"
-                          name="Maturity Date"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Maturity Date]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Cost Centre Code]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
@@ -687,72 +911,6 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[New Advances]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[New Advances]"
-                          name="New Advances"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[New Advances]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Refinancing]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Refinancing]"
-                          name="Refinancing"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinancing]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Exposure]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Exposure]"
-                          name="Exposure"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Exposure]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
@@ -788,138 +946,6 @@
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
                               name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Occupation]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Credit Limit]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Credit Limit]"
-                          name="Credit Limit"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Limit]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Customer Rate]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Customer Rate]"
-                          name="Customer Rate"
-                          precision="13"
-                          scale="4"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Rate]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Earning Rate]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Earning Rate]"
-                          name="Earning Rate"
-                          precision="13"
-                          scale="4"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Earning Rate]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Balance]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Balance]"
-                          name="Balance"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Balance Past RRD]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Balance Past RRD]"
-                          name="Balance Past RRD"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance Past RRD]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Days Past RRD]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Days Past RRD]"
-                          name="Days Past RRD"
-                          precision="7"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days Past RRD]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -983,46 +1009,6 @@
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
                               name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Interest Classification]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Next Credit Review Date]"
-                          dataType="date"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Next Credit Review Date]"
-                          name="Next Credit Review Date"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Next Credit Review Date]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Rate Review Date]"
-                          dataType="date"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Rate Review Date]"
-                          name="Rate Review Date"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Rate Review Date]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1170,72 +1156,6 @@
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
                               name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Post Code]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Accrued Income]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Accrued Income]"
-                          name="Accrued Income"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Accrued Income]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Capatilised Credit Limit]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Capatilised Credit Limit]"
-                          name="Capatilised Credit Limit"
-                          precision="13"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Capatilised Credit Limit]}</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Days in Arrears]"
-                          dataType="numeric"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Days in Arrears]"
-                          name="Days in Arrears"
-                          precision="7"
-                          scale="2"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.Int32"
-                              description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days in Arrears]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1620,8 +1540,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Connections[FlatFileConnection]"
-                      connectionManagerID="{231BEBE1-E59A-4B6F-861E-CF4AA227CBCE}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[StockCo_FlatFile]"
+                      connectionManagerID="Package.ConnectionManagers[StockCo_FlatFile]"
+                      connectionManagerRefId="Package.ConnectionManagers[StockCo_FlatFile]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
@@ -1631,12 +1551,10 @@
                       <outputColumns>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i2"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Contract]"
                           name="Contract"
                           truncationRowDisposition="FailComponent">
@@ -1653,12 +1571,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Client Number]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i2"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Number]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Client Number]"
                           name="Client Number"
                           truncationRowDisposition="FailComponent">
@@ -1680,7 +1596,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Name]"
-                          length="50"
+                          length="161"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Client Name]"
                           name="Client Name"
                           truncationRowDisposition="FailComponent">
@@ -1702,7 +1618,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Code]"
-                          length="50"
+                          length="13"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Product Code]"
                           name="Product Code"
                           truncationRowDisposition="FailComponent">
@@ -1719,12 +1635,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Verified Date]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="date"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Verified Date]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Verified Date]"
                           name="Verified Date"
                           truncationRowDisposition="FailComponent">
@@ -1741,12 +1655,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Maturity Date]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="date"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Maturity Date]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Maturity Date]"
                           name="Maturity Date"
                           truncationRowDisposition="FailComponent">
@@ -1768,7 +1680,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cost Centre Code]"
-                          length="50"
+                          length="5"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Cost Centre Code]"
                           name="Cost Centre Code"
                           truncationRowDisposition="FailComponent">
@@ -1790,7 +1702,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Account Status]"
-                          length="50"
+                          length="7"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Account Status]"
                           name="Account Status"
                           truncationRowDisposition="FailComponent">
@@ -1812,7 +1724,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Channel]"
-                          length="50"
+                          length="13"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Channel]"
                           name="Channel"
                           truncationRowDisposition="FailComponent">
@@ -1829,12 +1741,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[New Advances]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[New Advances]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[New Advances]"
                           name="New Advances"
                           truncationRowDisposition="FailComponent">
@@ -1851,12 +1761,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinancing]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Refinancing]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinancing]"
                           name="Refinancing"
                           truncationRowDisposition="FailComponent">
@@ -1873,12 +1781,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Exposure]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Exposure]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Exposure]"
                           name="Exposure"
                           truncationRowDisposition="FailComponent">
@@ -1900,7 +1806,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Industry]"
-                          length="50"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Industry]"
                           name="Industry"
                           truncationRowDisposition="FailComponent">
@@ -1939,12 +1845,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Limit]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Credit Limit]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Limit]"
                           name="Credit Limit"
                           truncationRowDisposition="FailComponent">
@@ -1961,12 +1865,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Rate]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Rate]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Rate]"
                           name="Customer Rate"
                           truncationRowDisposition="FailComponent">
@@ -1983,12 +1885,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Earning Rate]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Earning Rate]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Earning Rate]"
                           name="Earning Rate"
                           truncationRowDisposition="FailComponent">
@@ -2005,12 +1905,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Balance]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]"
                           name="Balance"
                           truncationRowDisposition="FailComponent">
@@ -2027,12 +1925,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance Past RRD]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Balance Past RRD]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance Past RRD]"
                           name="Balance Past RRD"
                           truncationRowDisposition="FailComponent">
@@ -2049,12 +1945,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days Past RRD]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Days Past RRD]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days Past RRD]"
                           name="Days Past RRD"
                           truncationRowDisposition="FailComponent">
@@ -2120,7 +2014,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Interest Classification]"
-                          length="50"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Interest Classification]"
                           name="Interest Classification"
                           truncationRowDisposition="FailComponent">
@@ -2137,12 +2031,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Next Credit Review Date]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="date"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Next Credit Review Date]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Next Credit Review Date]"
                           name="Next Credit Review Date"
                           truncationRowDisposition="FailComponent">
@@ -2159,12 +2051,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Rate Review Date]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="date"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rate Review Date]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Rate Review Date]"
                           name="Rate Review Date"
                           truncationRowDisposition="FailComponent">
@@ -2208,7 +2098,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Security Category]"
-                          length="50"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Security Category]"
                           name="Security Category"
                           truncationRowDisposition="FailComponent">
@@ -2247,12 +2137,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i1"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Risk Grade]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade]"
                           name="Risk Grade"
                           truncationRowDisposition="FailComponent">
@@ -2269,12 +2157,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade Date Updated]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="date"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Risk Grade Date Updated]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade Date Updated]"
                           name="Risk Grade Date Updated"
                           truncationRowDisposition="FailComponent">
@@ -2296,7 +2182,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ANZIC]"
-                          length="50"
+                          length="5"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[ANZIC]"
                           name="ANZIC"
                           truncationRowDisposition="FailComponent">
@@ -2313,12 +2199,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Post Code]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i2"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Post Code]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Post Code]"
                           name="Post Code"
                           truncationRowDisposition="FailComponent">
@@ -2335,12 +2219,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Accrued Income]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accrued Income]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Accrued Income]"
                           name="Accrued Income"
                           truncationRowDisposition="FailComponent">
@@ -2357,12 +2239,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Capatilised Credit Limit]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Capatilised Credit Limit]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Capatilised Credit Limit]"
                           name="Capatilised Credit Limit"
                           truncationRowDisposition="FailComponent">
@@ -2379,12 +2259,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days in Arrears]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="i2"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Days in Arrears]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days in Arrears]"
                           name="Days in Arrears"
                           truncationRowDisposition="FailComponent">
@@ -2401,12 +2279,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[P1]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[P1]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[P1]"
                           name="P1"
                           truncationRowDisposition="FailComponent">
@@ -2423,12 +2299,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[P2]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[P2]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[P2]"
                           name="P2"
                           truncationRowDisposition="FailComponent">
@@ -2445,12 +2319,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M]"
                           name="M"
                           truncationRowDisposition="FailComponent">
@@ -2467,12 +2339,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M1]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M1]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M1]"
                           name="M1"
                           truncationRowDisposition="FailComponent">
@@ -2489,12 +2359,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M2]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M2]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M2]"
                           name="M2"
                           truncationRowDisposition="FailComponent">
@@ -2511,12 +2379,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M3]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M3]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[M3]"
                           name="M3"
                           truncationRowDisposition="FailComponent">
@@ -2533,12 +2399,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP1]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP1]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP1]"
                           name="NP1"
                           truncationRowDisposition="FailComponent">
@@ -2555,12 +2419,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP2]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP2]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP2]"
                           name="NP2"
                           truncationRowDisposition="FailComponent">
@@ -2577,12 +2439,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP3]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP3]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP3]"
                           name="NP3"
                           truncationRowDisposition="FailComponent">
@@ -2599,12 +2459,10 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP4]"
-                          codePage="1252"
-                          dataType="str"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP4]"
-                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[NP4]"
                           name="NP4"
                           truncationRowDisposition="FailComponent">
@@ -2624,273 +2482,215 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Contract]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i2"
                           name="Contract" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Number]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i2"
                           name="Client Number" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Name]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="161"
                           name="Client Name" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Code]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="13"
                           name="Product Code" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Verified Date]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="date"
                           name="Verified Date" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Maturity Date]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="date"
                           name="Maturity Date" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cost Centre Code]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="5"
                           name="Cost Centre Code" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Account Status]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="7"
                           name="Account Status" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Channel]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="13"
                           name="Channel" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[New Advances]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="New Advances" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Refinancing]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Refinancing" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Exposure]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Exposure" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Industry]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="14"
                           name="Industry" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Occupation]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="14"
                           name="Occupation" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Credit Limit]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Credit Limit" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer Rate]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Customer Rate" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Earning Rate]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Earning Rate" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Balance]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Balance" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Balance Past RRD]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Balance Past RRD" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Days Past RRD]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Days Past RRD" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Region]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="19"
                           name="Region" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Client Type]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="255"
                           name="Client Type" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Interest Classification]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="12"
                           name="Interest Classification" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Next Credit Review Date]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="255"
                           name="Next Credit Review Date" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rate Review Date]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="255"
                           name="Rate Review Date" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Security Location]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="19"
                           name="Security Location" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Security Category]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="9"
                           name="Security Category" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Originator]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="27"
                           name="Originator" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Risk Grade]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i1"
                           name="Risk Grade" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Risk Grade Date Updated]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="date"
                           name="Risk Grade Date Updated" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ANZIC]"
                           codePage="1252"
                           dataType="str"
-                          length="50"
+                          length="5"
                           name="ANZIC" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Post Code]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i2"
                           name="Post Code" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accrued Income]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Accrued Income" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Capatilised Credit Limit]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="Capatilised Credit Limit" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Days in Arrears]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="i2"
                           name="Days in Arrears" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[P1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="P1" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[P2]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="P2" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="M" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="M1" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M2]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="M2" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[M3]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="M3" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP1]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="NP1" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP2]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="NP2" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP3]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="NP3" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NP4]"
-                          codePage="1252"
-                          dataType="str"
-                          length="50"
+                          dataType="r4"
                           name="NP4" />
                       </externalMetadataColumns>
                     </output>
@@ -3045,6 +2845,102 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[RecordSource]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[SOURCE]" />
                         <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Verified Date]"
+                          cachedDataType="date"
+                          cachedName="Verified Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Verified_Date]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Verified Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Maturity Date]"
+                          cachedDataType="date"
+                          cachedName="Maturity Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Maturity_Date]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Maturity Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[New Advances]"
+                          cachedDataType="r4"
+                          cachedName="New Advances"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[New_Advances]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[New Advances]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Refinancing]"
+                          cachedDataType="r4"
+                          cachedName="Refinancing"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Refinancing]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinancing]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Exposure]"
+                          cachedDataType="r4"
+                          cachedName="Exposure"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Exposure]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Exposure]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Credit Limit]"
+                          cachedDataType="r4"
+                          cachedName="Credit Limit"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Limit]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Limit]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Customer Rate]"
+                          cachedDataType="r4"
+                          cachedName="Customer Rate"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Rate]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Customer Rate]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Earning Rate]"
+                          cachedDataType="r4"
+                          cachedName="Earning Rate"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Earning_Rate]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Earning Rate]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Balance]"
+                          cachedDataType="r4"
+                          cachedName="Balance"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Balance]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Balance Past RRD]"
+                          cachedDataType="r4"
+                          cachedName="Balance Past RRD"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Arrears_Balance]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Balance Past RRD]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Days in Arrears]"
+                          cachedDataType="i2"
+                          cachedName="Days in Arrears"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Days_in_Arrears]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days in Arrears]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Capatilised Credit Limit]"
+                          cachedDataType="r4"
+                          cachedName="Capatilised Credit Limit"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Capatilised_Credit_Limit]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Capatilised Credit Limit]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Next Credit Review Date]"
+                          cachedDataType="date"
+                          cachedName="Next Credit Review Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Next_Credit_Review_Date]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Next Credit Review Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Days Past RRD]"
+                          cachedDataType="r4"
+                          cachedName="Days Past RRD"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Days_Past_RRD]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Days Past RRD]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Rate Review Date]"
+                          cachedDataType="date"
+                          cachedName="Rate Review Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Rate_Review_Date]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Rate Review Date]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Accrued Income]"
+                          cachedDataType="r4"
+                          cachedName="Accrued Income"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Accrued_Income]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Accrued Income]" />
+                        <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Contract]"
                           cachedDataType="wstr"
                           cachedLength="10"
@@ -3073,31 +2969,12 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Product_Code]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Product Code]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Verified Date]"
-                          cachedDataType="date"
-                          cachedName="Verified Date"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Verified_Date]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Verified Date]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Maturity Date]"
-                          cachedDataType="date"
-                          cachedName="Maturity Date"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Maturity_Date]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Maturity Date]" />
-                        <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Cost Centre Code]"
                           cachedDataType="wstr"
                           cachedLength="10"
                           cachedName="Cost Centre Code"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Cost_Centre_Code]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Cost Centre Code]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Channel]"
-                          cachedDataType="wstr"
-                          cachedLength="15"
-                          cachedName="Channel"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Channel]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Account Status]"
                           cachedDataType="wstr"
@@ -3106,91 +2983,54 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Account_Status]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Account Status]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[New Advances]"
-                          cachedDataType="numeric"
-                          cachedName="New Advances"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[New_Advances]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[New Advances]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Refinancing]"
-                          cachedDataType="numeric"
-                          cachedName="Refinancing"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Refinancing]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Refinancing]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Exposure]"
-                          cachedDataType="numeric"
-                          cachedName="Exposure"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Exposure]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Exposure]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Industry]"
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Channel]"
                           cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Industry"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]" />
+                          cachedLength="15"
+                          cachedName="Channel"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Channel]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Occupation]"
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Post Code]"
                           cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="Occupation"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Occupation]" />
+                          cachedLength="4"
+                          cachedName="Post Code"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Post_Code]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Post Code]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Credit Limit]"
-                          cachedDataType="numeric"
-                          cachedName="Credit Limit"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Limit]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Credit Limit]" />
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[ANZIC]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="ANZIC"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[ANZIC]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[ANZIC]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Customer Rate]"
-                          cachedDataType="numeric"
-                          cachedName="Customer Rate"
-                          cachedPrecision="13"
-                          cachedScale="4"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Rate]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Customer Rate]" />
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Risk Grade]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Risk Grade"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Grade]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Risk Grade]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Earning Rate]"
-                          cachedDataType="numeric"
-                          cachedName="Earning Rate"
-                          cachedPrecision="13"
-                          cachedScale="4"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Earning_Rate]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Earning Rate]" />
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Originator]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Originator"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Originator]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Originator]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Balance]"
-                          cachedDataType="numeric"
-                          cachedName="Balance"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Balance]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Balance]" />
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Security Category]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="Security Category"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Security_Category]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Security Category]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Balance Past RRD]"
-                          cachedDataType="numeric"
-                          cachedName="Balance Past RRD"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Arrears_Balance]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Balance Past RRD]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Days in Arrears]"
-                          cachedDataType="numeric"
-                          cachedName="Days in Arrears"
-                          cachedPrecision="7"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Days_in_Arrears]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Days in Arrears]" />
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Security Location]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Security Location"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Security_Location]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Security Location]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Region]"
                           cachedDataType="wstr"
@@ -3213,68 +3053,19 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Interest_Classification]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Interest Classification]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[P1]"
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Occupation]"
                           cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="P1"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[P1]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[P1]" />
+                          cachedName="Occupation"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Occupation]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Occupation]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Capatilised Credit Limit]"
-                          cachedDataType="numeric"
-                          cachedName="Capatilised Credit Limit"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Capatilised_Credit_Limit]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Capatilised Credit Limit]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Next Credit Review Date]"
-                          cachedDataType="date"
-                          cachedName="Next Credit Review Date"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Next_Credit_Review_Date]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Next Credit Review Date]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Days Past RRD]"
-                          cachedDataType="numeric"
-                          cachedName="Days Past RRD"
-                          cachedPrecision="7"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Days_Past_RRD]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Days Past RRD]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Rate Review Date]"
-                          cachedDataType="date"
-                          cachedName="Rate Review Date"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Rate_Review_Date]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Rate Review Date]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Security Location]"
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Industry]"
                           cachedDataType="wstr"
-                          cachedLength="30"
-                          cachedName="Security Location"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Security_Location]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Security Location]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Security Category]"
-                          cachedDataType="wstr"
-                          cachedLength="20"
-                          cachedName="Security Category"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Security_Category]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Security Category]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Originator]"
-                          cachedDataType="wstr"
-                          cachedLength="30"
-                          cachedName="Originator"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Originator]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Originator]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Risk Grade]"
-                          cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="Risk Grade"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Grade]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Risk Grade]" />
+                          cachedLength="50"
+                          cachedName="Industry"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Industry]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Industry]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Risk Grade Date Updated]"
                           cachedDataType="wstr"
@@ -3283,27 +3074,12 @@
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Grade_Date_Updated]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Risk Grade Date Updated]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[ANZIC]"
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[P1]"
                           cachedDataType="wstr"
-                          cachedLength="10"
-                          cachedName="ANZIC"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[ANZIC]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[ANZIC]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Post Code]"
-                          cachedDataType="wstr"
-                          cachedLength="4"
-                          cachedName="Post Code"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Post_Code]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Post Code]" />
-                        <inputColumn
-                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Accrued Income]"
-                          cachedDataType="numeric"
-                          cachedName="Accrued Income"
-                          cachedPrecision="13"
-                          cachedScale="2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Accrued_Income]"
-                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[Accrued Income]" />
+                          cachedLength="50"
+                          cachedName="P1"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[P1]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Data Conversion.Outputs[Data Conversion Output].Columns[P1]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[P2]"
                           cachedDataType="wstr"
@@ -5651,8 +5427,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{CC60D210-B91A-40FE-99A5-BF84CB570CF8}"
-          DTS:ObjectName="{CC60D210-B91A-40FE-99A5-BF84CB570CF8}"
+          DTS:DTSID="{775D8CF7-838D-446F-B293-623E9DD916EF}"
+          DTS:ObjectName="{775D8CF7-838D-446F-B293-623E9DD916EF}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::SourceFileName" />
       </DTS:ForEachVariableMappings>
@@ -5908,7 +5684,7 @@
           PanelSize="796,654"
           Size="796,697"
           Id="Package\Foreach Loop Container"
-          TopLeft="42,12" />
+          TopLeft="41,11" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -5920,7 +5696,7 @@
         <NodeLayout
           Size="150,42"
           Id="Package\Foreach Loop Container\FileToStage\Flat File Source"
-          TopLeft="27.4285718956773,20.8873952509211" />
+          TopLeft="26.4285718956773,19.8873952509211" />
         <NodeLayout
           Size="153,42"
           Id="Package\Foreach Loop Container\FileToStage\Derived Column"
@@ -5929,10 +5705,6 @@
           Size="171,42"
           Id="Package\Foreach Loop Container\FileToStage\Stage Table"
           TopLeft="296,330" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Foreach Loop Container\FileToStage\Data Conversion"
-          TopLeft="126,122" />
         <NodeLayout
           Size="130,42"
           Id="Package\Foreach Loop Container\FileToStage\Row Count"
@@ -5963,40 +5735,6 @@
                     Point3="-81.448983175762,27.4058811174545" />
                   <mssgle:LineSegment
                     End="-81.448983175762,39.311762234909" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\FileToStage.Paths[Data Conversion Output]"
-          TopLeft="282,143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="218.551022614404,39.552942600712"
-              Start="0,0"
-              End="211.051022614404,39.552942600712">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="105.275511307202,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="105.275511307202,0"
-                    Point2="109.275511307202,0"
-                    Point3="109.275511307202,4" />
-                  <mssgle:LineSegment
-                    End="109.275511307202,35.552942600712" />
-                  <mssgle:CubicBezierSegment
-                    Point1="109.275511307202,35.552942600712"
-                    Point2="109.275511307202,39.552942600712"
-                    Point3="113.275511307202,39.552942600712" />
-                  <mssgle:LineSegment
-                    End="211.051022614404,39.552942600712" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6039,32 +5777,70 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Foreach Loop Container\FileToStage\Data Conversion"
+          TopLeft="126,122" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\FileToStage.Paths[Flat File Source Output]"
-          TopLeft="102.428571895677,62.8873952509211">
+          TopLeft="101.428571895677,61.8873952509211">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="101.571428104323,59.1126047490789"
+              EndConnector="102.571428104323,60.1126047490789"
               Start="0,0"
-              End="101.571428104323,51.6126047490789">
+              End="102.571428104323,52.6126047490789">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5563023745394" />
+                    End="0,26.0563023745394" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.5563023745394"
-                    Point2="0,29.5563023745394"
-                    Point3="4,29.5563023745394" />
+                    Point1="0,26.0563023745394"
+                    Point2="0,30.0563023745394"
+                    Point3="4,30.0563023745394" />
                   <mssgle:LineSegment
-                    End="97.5714281043227,29.5563023745394" />
+                    End="98.5714281043227,30.0563023745394" />
                   <mssgle:CubicBezierSegment
-                    Point1="97.5714281043227,29.5563023745394"
-                    Point2="101.571428104323,29.5563023745394"
-                    Point3="101.571428104323,33.5563023745394" />
+                    Point1="98.5714281043227,30.0563023745394"
+                    Point2="102.571428104323,30.0563023745394"
+                    Point3="102.571428104323,34.0563023745394" />
                   <mssgle:LineSegment
-                    End="101.571428104323,51.6126047490789" />
+                    End="102.571428104323,52.6126047490789" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\FileToStage.Paths[Data Conversion Output]"
+          TopLeft="282,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="218.551022614404,39.552942600712"
+              Start="0,0"
+              End="211.051022614404,39.552942600712">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="105.275511307202,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="105.275511307202,0"
+                    Point2="109.275511307202,0"
+                    Point3="109.275511307202,4" />
+                  <mssgle:LineSegment
+                    End="109.275511307202,35.552942600712" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.275511307202,35.552942600712"
+                    Point2="109.275511307202,39.552942600712"
+                    Point3="113.275511307202,39.552942600712" />
+                  <mssgle:LineSegment
+                    End="211.051022614404,39.552942600712" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
