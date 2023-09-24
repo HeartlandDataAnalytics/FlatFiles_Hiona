@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Cash"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{7AB32FFF-31BE-41C2-A3AE-8779680B7914}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{4D6F9CFB-F88C-4E76-A280-39AA393A61C3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -37,19 +37,20 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="304"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="AsAtDateTime"
-              DTS:DTSID="{3C0BA177-A268-4E36-990D-E2F682CFD9DD}"
+              DTS:DTSID="{7D8FA0C2-ECB8-4225-B55C-2F2F52FE1295}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="10"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Harmoney_Account_Number"
-              DTS:DTSID="{6ECF5886-52D6-4AC8-AE38-B0A602C71650}"
+              DTS:DTSID="{77AADA70-1E0B-46D8-8CDA-F498B7245BD1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,34 +58,33 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="Transaction_Date"
-              DTS:DTSID="{34E21539-2ED2-4863-92D7-B64FD6FB78F4}"
+              DTS:DTSID="{0B6B7F1E-0412-450D-A49A-CD8F19B7CD4E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="12"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Cash Activity Type"
-              DTS:DTSID="{0DFC7090-BD9D-4010-9247-5EBACED81C03}"
+              DTS:DTSID="{ECA1ADC3-1322-42BA-9F2E-7C705CAB73A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="15"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Identifier"
-              DTS:DTSID="{E6F60289-AB26-4B04-9E20-23CE45785084}"
+              DTS:DTSID="{26DE84F2-41A4-45D0-BFC4-8A5C763A4311}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="131"
-              DTS:DataPrecision="18"
+              DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="Amount_Cleared"
-              DTS:DTSID="{1F0D5072-3914-4CBC-BB23-BC5834C2DA00}"
+              DTS:DTSID="{B42CFBA0-E26D-4C28-A971-EDA9D4E51447}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -99,7 +99,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ArchiveFileDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\Harmoney\Cash_v2</DTS:VariableValue>
+        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\ARCHIVE\HARMONEY\Cash_v2</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -110,7 +110,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ArchiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\Harmoney\Cash_v2\Cash_v2_01_1900-01-01.csv</DTS:VariableValue>
+        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\ARCHIVE\HARMONEY\Cash_v2\Cash_v2_01_1900-01-01.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -365,10 +365,11 @@
                       <outputColumns>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[AsAtDateTime]"
-                          dataType="dbTimeStamp2"
+                          dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AsAtDateTime]"
+                          length="50"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[AsAtDateTime]"
                           name="AsAtDateTime"
                           truncationRowDisposition="FailComponent">
@@ -389,7 +390,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Harmoney_Account_Number]"
-                          length="50"
+                          length="10"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Harmoney_Account_Number]"
                           name="Harmoney_Account_Number"
                           truncationRowDisposition="FailComponent">
@@ -430,7 +431,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cash Activity Type]"
-                          length="50"
+                          length="12"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Cash Activity Type]"
                           name="Cash Activity Type"
                           truncationRowDisposition="FailComponent">
@@ -451,7 +452,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Identifier]"
-                          length="50"
+                          length="15"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Identifier]"
                           name="Identifier"
                           truncationRowDisposition="FailComponent">
@@ -468,13 +469,12 @@
                         </outputColumn>
                         <outputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Amount_Cleared]"
-                          dataType="numeric"
+                          dataType="r4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount_Cleared]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Amount_Cleared]"
                           name="Amount_Cleared"
-                          precision="18"
                           truncationRowDisposition="FailComponent">
                           <properties>
                             <property
@@ -492,12 +492,13 @@
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[AsAtDateTime]"
-                          dataType="dbTimeStamp2"
+                          dataType="wstr"
+                          length="50"
                           name="AsAtDateTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Harmoney_Account_Number]"
                           dataType="wstr"
-                          length="50"
+                          length="10"
                           name="Harmoney_Account_Number" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Transaction_Date]"
@@ -506,18 +507,17 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Cash Activity Type]"
                           dataType="wstr"
-                          length="50"
+                          length="12"
                           name="Cash Activity Type" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Identifier]"
                           dataType="wstr"
-                          length="50"
+                          length="15"
                           name="Identifier" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount_Cleared]"
-                          dataType="numeric"
-                          name="Amount_Cleared"
-                          precision="18" />
+                          dataType="r4"
+                          name="Amount_Cleared" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -653,7 +653,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[FILE_NAME]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="25"
                           cachedName="FILE_NAME"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]" />
@@ -665,14 +665,15 @@
                           lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_DATE]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[AsAtDateTime]"
-                          cachedDataType="dbTimeStamp2"
+                          cachedDataType="wstr"
+                          cachedLength="50"
                           cachedName="AsAtDateTime"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[AsAtDateTime]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[AsAtDateTime]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Harmoney_Account_Number]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="10"
                           cachedName="Harmoney_Account_Number"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Harmoney_Account_Number]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Harmoney_Account_Number]" />
@@ -685,22 +686,21 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Cash Activity Type]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="12"
                           cachedName="Cash Activity Type"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Cash_Activity_Type]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Cash Activity Type]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Identifier]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="15"
                           cachedName="Identifier"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Identifier]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Identifier]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Amount_Cleared]"
-                          cachedDataType="numeric"
+                          cachedDataType="r4"
                           cachedName="Amount_Cleared"
-                          cachedPrecision="18"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Amount_Cleared]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Amount_Cleared]" />
                       </inputColumns>
@@ -718,9 +718,9 @@
                           scale="7" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[AsAtDateTime]"
-                          dataType="dbTimeStamp2"
-                          name="AsAtDateTime"
-                          scale="7" />
+                          dataType="wstr"
+                          length="50"
+                          name="AsAtDateTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Harmoney_Account_Number]"
                           dataType="wstr"
@@ -894,28 +894,29 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[FILE_NAME]"
-                          length="50"
+                          length="80"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_NAME]"
                           name="FILE_NAME"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_DATE]"
-                          dataType="dbDate"
+                          dataType="dbTimeStamp2"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[FILE_DATE]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_DATE]"
                           name="FILE_DATE"
+                          scale="7"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[AsAtDateTime]"
-                          dataType="dbTimeStamp2"
+                          dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[AsAtDateTime]"
+                          length="50"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[AsAtDateTime]"
                           name="AsAtDateTime"
-                          scale="7"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[Harmoney_Account_Number]"
@@ -981,9 +982,9 @@
                           scale="7" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[AsAtDateTime]"
-                          dataType="dbTimeStamp2"
-                          name="AsAtDateTime"
-                          scale="7" />
+                          dataType="wstr"
+                          length="50"
+                          name="AsAtDateTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[Harmoney_Account_Number]"
                           dataType="wstr"
@@ -1029,10 +1030,10 @@
                           scale="7" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[AsAtDateTime]"
-                          dataType="dbTimeStamp2"
+                          dataType="wstr"
+                          length="50"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[AsAtDateTime]"
-                          name="AsAtDateTime"
-                          scale="7" />
+                          name="AsAtDateTime" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[Harmoney_Account_Number]"
                           dataType="wstr"
@@ -1154,21 +1155,22 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].Columns[FILE_NAME]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="80"
                           cachedName="FILE_NAME"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_NAME]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].Columns[FILE_DATE]"
-                          cachedDataType="dbDate"
+                          cachedDataType="dbTimeStamp2"
                           cachedName="FILE_DATE"
+                          cachedScale="7"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_DATE]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].Columns[AsAtDateTime]"
-                          cachedDataType="dbTimeStamp2"
+                          cachedDataType="wstr"
+                          cachedLength="50"
                           cachedName="AsAtDateTime"
-                          cachedScale="7"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[AsAtDateTime]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[AsAtDateTime]" />
                         <inputColumn
@@ -1220,9 +1222,9 @@
                           scale="7" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[AsAtDateTime]"
-                          dataType="dbTimeStamp2"
-                          name="AsAtDateTime"
-                          scale="7" />
+                          dataType="wstr"
+                          length="50"
+                          name="AsAtDateTime" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[Harmoney_Account_Number]"
                           dataType="wstr"
@@ -1418,8 +1420,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{F0CCE3A8-681C-4D0A-8DDC-47AED990BEEA}"
-          DTS:ObjectName="{F0CCE3A8-681C-4D0A-8DDC-47AED990BEEA}"
+          DTS:DTSID="{B82F2C0B-DEBB-4972-9A87-C76967CFC7AA}"
+          DTS:ObjectName="{B82F2C0B-DEBB-4972-9A87-C76967CFC7AA}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::SourceFileName" />
       </DTS:ForEachVariableMappings>
@@ -1641,9 +1643,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="40.5,63"
+              EndConnector="40.5,62.9999999999999"
               Start="0,0"
-              End="40.5,55.5">
+              End="40.5,55.4999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1660,7 +1662,7 @@
                     Point2="40.5,31.5"
                     Point3="40.5,35.5" />
                   <mssgle:LineSegment
-                    End="40.5,55.5" />
+                    End="40.5,55.4999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
