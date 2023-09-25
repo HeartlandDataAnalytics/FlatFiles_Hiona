@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="StockCo"
   DTS:PackageType="5"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{2F9BFE7C-0544-4AE3-8D26-8B46BA4B3401}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{2547DBE8-17D6-4E91-9863-743DD920407D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -510,6 +510,15 @@
       DTS:ObjectName="SourceFullPathName">
       <DTS:VariableValue
         DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\STOCKCO\Marac19000101.txt</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{000F6377-0B46-4C7A-A108-7C1561AEF57E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="StageTableName">
+      <DTS:VariableValue
+        DTS:DataType="8">stockco_Marac</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -4417,7 +4426,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
-              SQLTask:SqlStatementSource="truncate table dbo.stockco_Marac;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="truncate table dbo.?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -4572,10 +4581,6 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Foreach Loop Container\Truncate Stage Table"
-          TopLeft="179,118" />
-        <NodeLayout
           Size="134,42"
           Id="Package\Foreach Loop Container\FileToStage"
           TopLeft="196.952380628002,192.019607857437" />
@@ -4587,6 +4592,10 @@
           Size="160,42"
           Id="Package\Foreach Loop Container\StageToTarget"
           TopLeft="141.238095157,362.68627428101" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach Loop Container\Truncate Stage Table"
+          TopLeft="179,118" />
         <NodeLayout
           Size="217,42"
           Id="Package\Foreach Loop Container\UpdateLog-StageIngestCount"
