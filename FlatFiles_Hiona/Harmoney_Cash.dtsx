@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Cash"
   DTS:PackageType="5"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{B3CE03A9-1C36-4CA5-BD51-F53DEB83630D}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{6928742A-1445-4D00-BF28-70840B0B3AB0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -197,6 +197,17 @@
       <DTS:VariableValue
         DTS:DataType="8">Harmoney_Cash_Target</DTS:VariableValue>
     </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{36E0F643-92D6-4E8E-97CE-2571C1EDB3C7}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;truncate table dbo.&quot; + @[User::StageTableName] + &quot;;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateStageTableStatement">
+      <DTS:VariableValue
+        DTS:DataType="8">truncate table dbo.Harmoney_Cash;</DTS:VariableValue>
+    </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
@@ -229,7 +240,7 @@
         <DTS:Executable
           DTS:refId="Package\Foreach Loop Container\Execute SQL Task"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
+          DTS:Description="Truncate Stage Table"
           DTS:DTSID="{b7460527-90ac-401e-a86a-fbb09881ae16}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
@@ -239,7 +250,8 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
-              SQLTask:SqlStatementSource="truncate table dbo.?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::TruncateStageTableStatement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
                 SQLTask:DtsVariableName="User::StageTableName"
@@ -740,9 +752,8 @@
                           name="FILE_NAME" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
-                          dataType="dbTimeStamp2"
-                          name="FILE_DATE"
-                          scale="7" />
+                          dataType="dbDate"
+                          name="FILE_DATE" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[AsAtDateTime]"
                           dataType="wstr"
