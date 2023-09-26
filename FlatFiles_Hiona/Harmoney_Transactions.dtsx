@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Transactions"
   DTS:PackageType="5"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{7ABBF213-AD79-4D1C-89BF-44392C2368FF}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{ACB7BEAE-E245-485D-BD56-2D8C9BED9E5C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
