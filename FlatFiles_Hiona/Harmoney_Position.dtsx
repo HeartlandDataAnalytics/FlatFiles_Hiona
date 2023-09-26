@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Position"
   DTS:PackageType="5"
-  DTS:VersionBuild="88"
-  DTS:VersionGUID="{B39114F2-5E63-43D1-8896-04FC85E12D3D}">
+  DTS:VersionBuild="93"
+  DTS:VersionGUID="{DB33A10D-5EFF-4673-86B5-7BB9E21F95DF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +21,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{A9C757BE-232F-473F-BFBF-584BA1C590C8}"
       DTS:ObjectName="Harmoney_Position_FlatFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFullPathName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\Harmoney\Position_v2\Position_v2_20_2023-09-25.csv">
+          DTS:ConnectionString="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\Harmoney\Position_v2\Position_v2_20_1900-01-01.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
