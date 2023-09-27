@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="DI_Hindsight"
   DTS:PackageType="5"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{34532DDC-BF95-400E-B9D1-9DDBBCA71C62}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{24ED6D06-6C37-4064-90D3-4C8A8C35F351}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -41,7 +41,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Application ID"
-              DTS:DTSID="{B26650E5-752A-4E25-A8C3-B0F2B31C0966}"
+              DTS:DTSID="{2EF1B443-032E-41D5-B5CF-6C6A29E2D68D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -50,7 +50,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Sequence"
-              DTS:DTSID="{A006B810-F686-48BB-ADEA-A1CFF2C038E1}"
+              DTS:DTSID="{7E5D584F-F07F-4D00-BE4D-6CDBE4B366A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -59,7 +59,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Date Submitted"
-              DTS:DTSID="{5FA35017-0FE3-4E10-BB5B-AB585CB8FDBB}"
+              DTS:DTSID="{2EBAF139-05C3-40C2-AA78-6F0413127923}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,7 +68,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Credit Product"
-              DTS:DTSID="{553DABA6-EE7F-4900-92BD-1B3BFA78E0D2}"
+              DTS:DTSID="{68A46521-A3E4-4999-BC65-6376E24239F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +77,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Applicant Type"
-              DTS:DTSID="{89893B06-B8B9-459C-A34F-B8218F3E8211}"
+              DTS:DTSID="{F1F5DD41-FF87-4365-9ABF-578528B95362}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +86,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Legal Name"
-              DTS:DTSID="{1F20EE98-B0A4-4A0B-8237-083F4E14B32D}"
+              DTS:DTSID="{38542365-4F5B-4F75-9B92-F2185264D5A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +95,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Name"
-              DTS:DTSID="{2CB7C087-720C-4D12-8B28-88592633878D}"
+              DTS:DTSID="{598AEB79-75CF-4AC6-8084-7F9D07CE35F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -104,7 +104,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Date of Birth"
-              DTS:DTSID="{B949E475-2D16-499C-9720-5142D85D751B}"
+              DTS:DTSID="{322806EE-4F4E-45A3-A443-214678D429E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -113,7 +113,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Residence"
-              DTS:DTSID="{3C450878-4E51-4CB3-80F2-23F00868CDF6}"
+              DTS:DTSID="{CF0F3ACF-D4BA-4707-844E-A75CCBB7F317}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -122,7 +122,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Dependants"
-              DTS:DTSID="{654ACEDE-CCFB-4EEC-9956-1EB862D1AEA8}"
+              DTS:DTSID="{1AF85F12-D173-4074-8929-03948829DA9F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -131,7 +131,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Marital Status"
-              DTS:DTSID="{3BF7D6EF-FC4D-493F-9098-2D7BF379C1EC}"
+              DTS:DTSID="{5610249E-7E86-407A-81FA-631AFEC246EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -140,7 +140,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Type Current"
-              DTS:DTSID="{7413468A-CD90-4D81-83FC-AE9432C492CB}"
+              DTS:DTSID="{656E34C4-3C80-47FF-910B-289287B65DFB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -149,7 +149,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Postcode Current"
-              DTS:DTSID="{3967B96D-68A1-4D10-B1F8-D557505AB28D}"
+              DTS:DTSID="{C5B1356F-B8E8-4AAC-AB2C-D1F44D78A30F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -158,16 +158,16 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Months at Address Current"
-              DTS:DTSID="{7F65C388-8D02-4180-8A4F-739EA0943AC2}"
+              DTS:DTSID="{50FCE9DC-E7A7-42B5-BC9E-D31438644B63}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Residential Status Current"
-              DTS:DTSID="{A62C9D27-D64D-4DE3-BD1E-526D74BEB90D}"
+              DTS:DTSID="{C490DE07-EFDD-4214-BDF1-93CD1E1CEBEB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -176,7 +176,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Type Previous"
-              DTS:DTSID="{BB6AE2A9-3063-4DDB-A772-FA71DF0117AF}"
+              DTS:DTSID="{AFDB3F6C-6C1C-44FD-BDF4-C4B6E81AAD73}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -185,7 +185,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Postcode Previous"
-              DTS:DTSID="{E61A4D5D-40E3-4493-9134-00A1F0F33351}"
+              DTS:DTSID="{D1C14F7A-1BEF-495B-AD48-9720D53226BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -194,16 +194,16 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Months at Address Previous"
-              DTS:DTSID="{C880481A-8A6C-4C1C-B0BD-5DCA9A1688AA}"
+              DTS:DTSID="{E1083FCF-2BDC-42AF-96D9-0A04DEFFDCBC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="30"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Residential Status Previous"
-              DTS:DTSID="{35D6FE4C-1357-4817-8C3E-9315F7BAC1F9}"
+              DTS:DTSID="{6C59234E-0B42-4BC7-80BD-85B7D6D38EF4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -212,7 +212,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Score"
-              DTS:DTSID="{AC58212E-BBFA-49C9-92E1-F55A27DEA590}"
+              DTS:DTSID="{CE7B4E12-D3A4-4D53-BB1B-209CFA0A46AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -221,7 +221,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Dealer"
-              DTS:DTSID="{A948DCCE-7D18-426F-ACE9-8B8A80E6C89D}"
+              DTS:DTSID="{6174CB2B-AEF8-400D-ACFA-33FB6907C131}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -230,7 +230,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Name of Dealer"
-              DTS:DTSID="{F6821279-FD22-4392-94D4-CF8C2A63DF24}"
+              DTS:DTSID="{5C3F0F22-8C81-4990-8130-DCDE6F54D117}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -239,7 +239,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Amount Financed"
-              DTS:DTSID="{66BA17D2-0252-49C9-A7C8-208195E2D5C0}"
+              DTS:DTSID="{402DB905-F03E-437C-B609-68909B2588EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -248,7 +248,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Total Security Value"
-              DTS:DTSID="{507162AA-1B19-42C4-8931-882B0604AE5C}"
+              DTS:DTSID="{FAFC22C6-6AE9-4457-8D14-0F084F6118C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -257,7 +257,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Equity Percentage"
-              DTS:DTSID="{0045A4A8-9DCC-413A-B4B7-41EEA2CE955F}"
+              DTS:DTSID="{EDCF9546-E397-46AB-9405-1F8525E9CB99}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -266,7 +266,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Lender"
-              DTS:DTSID="{73D31B95-88A4-42AF-AE2A-1439E2717D2D}"
+              DTS:DTSID="{4A4197CF-91E8-48E8-8A1D-6EDF6452F6BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -275,7 +275,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Initial Status"
-              DTS:DTSID="{04205ED1-1B14-434C-A1D0-8F3CBE09A331}"
+              DTS:DTSID="{ACDE3422-E000-4439-9A06-3ED3B22D1756}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -284,7 +284,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Current Status"
-              DTS:DTSID="{3DB4566C-C8C5-4393-AD32-0F69C0ED024C}"
+              DTS:DTSID="{B26BCD36-56E3-4E87-8DA4-5B9FEAE62780}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -293,7 +293,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Deposit"
-              DTS:DTSID="{C7E3EB1D-3531-4184-ADDA-F4747C159401}"
+              DTS:DTSID="{25A4B698-91DF-4B83-80C3-C87287A875E9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -302,7 +302,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Interest Rate"
-              DTS:DTSID="{7D47495C-2668-463D-8B1F-95B2A185FA5E}"
+              DTS:DTSID="{5BB4A6C0-D7CC-4420-B931-0F7F8ACDEE62}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -311,7 +311,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Interest Payable"
-              DTS:DTSID="{F7471702-373B-4732-9A3F-F4569236150C}"
+              DTS:DTSID="{A29F347B-FFB4-4A00-8447-1B913B6A91D5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -320,7 +320,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Loan Term"
-              DTS:DTSID="{E40562C7-83AF-46C1-B52B-FD14FDD7BC1D}"
+              DTS:DTSID="{4A38E557-7F5B-4CD1-9C1A-0D9644DF5CF6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -329,7 +329,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Payments"
-              DTS:DTSID="{FA31A327-C4A2-4D5B-A9B7-8B140777BEF2}"
+              DTS:DTSID="{40BFDBDD-EA23-47FD-88BF-79E6CCE577DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -338,25 +338,25 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Payment Amount"
-              DTS:DTSID="{D3490EDB-CBFE-44BD-9F91-B5476DD9A017}"
+              DTS:DTSID="{E70A622D-DF84-4C8C-BD3F-BEAAE17C50E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Capacity"
-              DTS:DTSID="{B21D0856-6849-4FB1-8261-133A16710050}"
+              DTS:DTSID="{E17E723E-4924-4DDF-AE2B-FFFC4E084E0B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="25"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Total Surplus"
-              DTS:DTSID="{5512EF8E-CADA-48BF-8BEC-9397EDBD39AF}"
+              DTS:DTSID="{14F1FBB0-07E0-4507-8CE1-B8AAB48BC478}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -365,16 +365,16 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Risk Segment"
-              DTS:DTSID="{977E3C86-93E1-4AC1-82A4-9E42125C0879}"
+              DTS:DTSID="{DDA09D16-4BC1-49C0-BA0D-70600B10195C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="5"
+              DTS:MaximumWidth="10"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Risk Grade"
-              DTS:DTSID="{B234C77C-839D-4EFA-8323-BBB8802CF2C7}"
+              DTS:DTSID="{EAC65DC2-E6A5-4B3B-8AA2-39B34335FDE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -383,7 +383,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Number of Adults"
-              DTS:DTSID="{05591A08-5C09-4F3E-9B34-422071CF548A}"
+              DTS:DTSID="{3BD32045-46E9-418E-81C4-D6FADCC0468E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -392,7 +392,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Arrears Amount"
-              DTS:DTSID="{E8AF7752-DD6B-4098-B734-89DBB6626470}"
+              DTS:DTSID="{606403F3-B854-45AF-A756-D9939397A85D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -401,7 +401,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Count of Arrears"
-              DTS:DTSID="{DA826528-0F92-4188-B665-73580493227F}"
+              DTS:DTSID="{48ED5C55-7D48-4A77-8A6D-85CEBD786777}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -410,7 +410,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Earliest Start Date"
-              DTS:DTSID="{5C8C0E2A-AD93-4A70-A594-41D25DB7E383}"
+              DTS:DTSID="{D091EBC9-E32A-4829-BF25-4B4E39457855}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -419,7 +419,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Count of Judgements"
-              DTS:DTSID="{7D718E45-8569-4E49-A958-B0DDC744034D}"
+              DTS:DTSID="{BF59BE4E-9AC2-46C6-8020-EBE864F0348D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -428,7 +428,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Count of Summons"
-              DTS:DTSID="{9C8F88A4-7926-4D7B-9ABB-54E8D5DBF8BD}"
+              DTS:DTSID="{784CA2B8-612E-498C-9636-C8ECC8443663}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -437,7 +437,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Count of Court Actions"
-              DTS:DTSID="{8B9E6A52-BEA8-4B43-B2B0-7D5E059D24CF}"
+              DTS:DTSID="{4870C390-36E9-4D06-B4E3-95C77122BCD2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -446,7 +446,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Count of Bankruptcies"
-              DTS:DTSID="{24765F43-3FFA-4512-B14A-04374279FFF5}"
+              DTS:DTSID="{18580570-131C-4BBF-A491-28FBE1070396}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -455,7 +455,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Count of Defaults"
-              DTS:DTSID="{CE12EE8E-2972-4BC4-99EF-D5088340D891}"
+              DTS:DTSID="{697F398F-5CBF-459F-A1EC-5207EC9B5CD8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -464,7 +464,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_purchase_price"
-              DTS:DTSID="{E0115B12-9811-4EDA-B00E-35B0D5AFCE32}"
+              DTS:DTSID="{AA83FF46-B4A0-43EA-88EF-F91410F87BA8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -473,7 +473,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_trade_in"
-              DTS:DTSID="{0F2D4C20-2C87-43CE-969C-BB06523AB8B5}"
+              DTS:DTSID="{F820CBBA-4A62-4903-A126-D9B74D753DAA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -482,7 +482,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_money_owing"
-              DTS:DTSID="{9B90D89C-F3C4-4248-9E88-50CBBC740E92}"
+              DTS:DTSID="{C6B44217-B37D-409B-9F65-A05F410DA9EB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -491,7 +491,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_total"
-              DTS:DTSID="{0EE4EFCB-AE71-48F6-9366-56CEC3B0E355}"
+              DTS:DTSID="{72A79AAF-C41F-4EFE-BA06-967FE15D23CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -500,7 +500,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_residual_value"
-              DTS:DTSID="{18D0A56F-FDD0-45F9-B11A-198FAB13CAE8}"
+              DTS:DTSID="{BC057394-4D8F-4E4C-864A-E5D4DF0B3056}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -509,16 +509,16 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_equity"
-              DTS:DTSID="{DBC7B015-D54E-4C23-A198-CC47763ACD0C}"
+              DTS:DTSID="{371E1005-205D-4FA6-94D7-9BAD965D1CA4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="10"
+              DTS:MaximumWidth="20"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_equity_percent"
-              DTS:DTSID="{D3C593BD-2737-4535-AC9A-D92FEF89E017}"
+              DTS:DTSID="{C7A521F2-BA81-4665-86DE-C44D1F9B69C9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -527,7 +527,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_mth_income_app"
-              DTS:DTSID="{22978E5F-0895-41E6-9AAD-AEA93FF06DA7}"
+              DTS:DTSID="{FFDBE618-8886-4EE8-AE0C-D5A7B1BFCF3D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -536,7 +536,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="am_mth_income_partner"
-              DTS:DTSID="{BDDA76AB-1854-4721-97AF-0E0512723C96}"
+              DTS:DTSID="{EB437400-1990-416A-A95A-F14AF0A5C112}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -545,7 +545,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Date Modified"
-              DTS:DTSID="{07CB26A8-89D6-44B1-9E21-99BC15231B7B}"
+              DTS:DTSID="{CFBCA5B1-9157-4F23-9137-51487B819CEB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -554,7 +554,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Risk Odds"
-              DTS:DTSID="{7C75A6A9-C3C2-4AC4-8221-98BC905A95A8}"
+              DTS:DTSID="{29B68FE9-6253-4DB2-8B31-F686D3946B16}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -563,7 +563,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DnB Score"
-              DTS:DTSID="{EADFCA39-ECBD-4F95-B452-62FD45238041}"
+              DTS:DTSID="{C47F6704-839F-4F08-B1DE-3CBCED25AA81}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -572,7 +572,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Veda Risk Score"
-              DTS:DTSID="{E3AE22E6-BA0C-4830-8592-EFAEA4F690CB}"
+              DTS:DTSID="{014236C4-1150-4369-9DC9-0E06787E14B1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -581,7 +581,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="DnB Risk Score"
-              DTS:DTSID="{536368E4-00FB-43CA-AF24-D30010DE5923}"
+              DTS:DTSID="{2CE06AC3-6C49-474D-A112-AFB3DBBABD31}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -590,7 +590,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Combined Risk"
-              DTS:DTSID="{48857643-C4C4-4304-8A10-4A1106CDBEFA}"
+              DTS:DTSID="{723925F4-0777-45C4-9E87-49A8331C8E93}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1186,7 +1186,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Residential Status Current]"
-                          length="10"
+                          length="30"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Residential Status Current]"
                           name="Residential Status Current"
                           truncationRowDisposition="FailComponent">
@@ -1270,7 +1270,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Residential Status Previous]"
-                          length="10"
+                          length="30"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Residential Status Previous]"
                           name="Residential Status Previous"
                           truncationRowDisposition="FailComponent">
@@ -1606,7 +1606,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Capacity]"
-                          length="10"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Capacity]"
                           name="Capacity"
                           truncationRowDisposition="FailComponent">
@@ -1627,7 +1627,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Total Surplus]"
-                          length="10"
+                          length="25"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Total Surplus]"
                           name="Total Surplus"
                           truncationRowDisposition="FailComponent">
@@ -1669,7 +1669,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Risk Grade]"
-                          length="5"
+                          length="10"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade]"
                           name="Risk Grade"
                           truncationRowDisposition="FailComponent">
@@ -2005,7 +2005,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[am_equity_percent]"
-                          length="10"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[am_equity_percent]"
                           name="am_equity_percent"
                           truncationRowDisposition="FailComponent">
@@ -2264,7 +2264,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Residential Status Current]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential Status Current" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Address Type Previous]"
@@ -2284,7 +2284,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Residential Status Previous]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential Status Previous" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Score]"
@@ -2364,12 +2364,12 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Capacity]"
                           dataType="wstr"
-                          length="10"
+                          length="20"
                           name="Capacity" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Total Surplus]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           name="Total Surplus" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Risk Segment]"
@@ -2379,7 +2379,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Risk Grade]"
                           dataType="wstr"
-                          length="5"
+                          length="10"
                           name="Risk Grade" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number of Adults]"
@@ -2459,7 +2459,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[am_equity_percent]"
                           dataType="wstr"
-                          length="10"
+                          length="20"
                           name="am_equity_percent" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[am_mth_income_app]"
@@ -2719,7 +2719,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Capacity]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="20"
                           cachedName="Capacity"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Capacity]" />
@@ -2768,7 +2768,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[am_equity_percent]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="20"
                           cachedName="am_equity_percent"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[am_equity_percent]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[am_equity_percent]" />
@@ -2845,7 +2845,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Residential Status Current]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="30"
                           cachedName="Residential Status Current"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Current]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Residential Status Current]" />
@@ -2873,7 +2873,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Residential Status Previous]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="30"
                           cachedName="Residential Status Previous"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Previous]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Residential Status Previous]" />
@@ -2957,7 +2957,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Total Surplus]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="25"
                           cachedName="Total Surplus"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Total_Surplus]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Total Surplus]" />
@@ -2978,7 +2978,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Risk Grade]"
                           cachedDataType="wstr"
-                          cachedLength="5"
+                          cachedLength="10"
                           cachedName="Risk Grade"
                           externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Grade]"
                           lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Risk Grade]" />
@@ -3165,7 +3165,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Current]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential_Status_Current" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Address_Type_Previous]"
@@ -3185,7 +3185,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Previous]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential_Status_Previous" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Score]"
@@ -3265,12 +3265,12 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           name="Capacity" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Total_Surplus]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           name="Total_Surplus" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Segment]"
@@ -3280,7 +3280,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Grade]"
                           dataType="wstr"
-                          length="5"
+                          length="10"
                           name="Risk_Grade" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Adults]"
@@ -3360,7 +3360,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[am_equity_percent]"
                           dataType="wstr"
-                          length="10"
+                          length="20"
                           name="am_equity_percent" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[am_mth_income_app]"
@@ -3670,7 +3670,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Residential_Status_Current]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="30"
                           cachedName="Residential_Status_Current"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Current]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Residential_Status_Current]" />
@@ -3698,7 +3698,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Residential_Status_Previous]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="30"
                           cachedName="Residential_Status_Previous"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Previous]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Residential_Status_Previous]" />
@@ -3810,14 +3810,14 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Capacity]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="25"
                           cachedName="Capacity"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Capacity]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Total_Surplus]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="25"
                           cachedName="Total_Surplus"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Surplus]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Total_Surplus]" />
@@ -3831,7 +3831,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Risk_Grade]"
                           cachedDataType="wstr"
-                          cachedLength="5"
+                          cachedLength="10"
                           cachedName="Risk_Grade"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Grade]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Risk_Grade]" />
@@ -3943,7 +3943,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[am_equity_percent]"
                           cachedDataType="wstr"
-                          cachedLength="10"
+                          cachedLength="20"
                           cachedName="am_equity_percent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[am_equity_percent]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[am_equity_percent]" />
@@ -4088,7 +4088,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Current]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential_Status_Current" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Address_Type_Previous]"
@@ -4108,7 +4108,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Residential_Status_Previous]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential_Status_Previous" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Score]"
@@ -4188,12 +4188,12 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Capacity]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           name="Capacity" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Total_Surplus]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           name="Total_Surplus" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Segment]"
@@ -4203,7 +4203,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Risk_Grade]"
                           dataType="wstr"
-                          length="5"
+                          length="10"
                           name="Risk_Grade" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Adults]"
@@ -4283,7 +4283,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[am_equity_percent]"
                           dataType="wstr"
-                          length="10"
+                          length="20"
                           name="am_equity_percent" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[am_mth_income_app]"
@@ -4579,7 +4579,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Residential_Status_Current]"
-                          length="10"
+                          length="30"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Residential_Status_Current]"
                           name="Residential_Status_Current"
                           truncationRowDisposition="FailComponent" />
@@ -4619,7 +4619,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Residential_Status_Previous]"
-                          length="10"
+                          length="30"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Residential_Status_Previous]"
                           name="Residential_Status_Previous"
                           truncationRowDisposition="FailComponent" />
@@ -4779,7 +4779,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Capacity]"
-                          length="10"
+                          length="25"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Capacity]"
                           name="Capacity"
                           truncationRowDisposition="FailComponent" />
@@ -4789,7 +4789,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Total_Surplus]"
-                          length="10"
+                          length="25"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Total_Surplus]"
                           name="Total_Surplus"
                           truncationRowDisposition="FailComponent" />
@@ -4809,7 +4809,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Risk_Grade]"
-                          length="5"
+                          length="10"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Risk_Grade]"
                           name="Risk_Grade"
                           truncationRowDisposition="FailComponent" />
@@ -4969,7 +4969,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[am_equity_percent]"
-                          length="10"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[am_equity_percent]"
                           name="am_equity_percent"
                           truncationRowDisposition="FailComponent" />
@@ -5138,7 +5138,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Residential_Status_Current]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential_Status_Current" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Address_Type_Previous]"
@@ -5158,7 +5158,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Residential_Status_Previous]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           name="Residential_Status_Previous" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Score]"
@@ -5238,12 +5238,12 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Capacity]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           name="Capacity" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Total_Surplus]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           name="Total_Surplus" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Risk_Segment]"
@@ -5253,7 +5253,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Risk_Grade]"
                           dataType="wstr"
-                          length="5"
+                          length="10"
                           name="Risk_Grade" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Adults]"
@@ -5333,7 +5333,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[am_equity_percent]"
                           dataType="wstr"
-                          length="10"
+                          length="20"
                           name="am_equity_percent" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[am_mth_income_app]"
@@ -5480,7 +5480,7 @@
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Residential_Status_Current]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Residential_Status_Current]"
                           name="Residential_Status_Current" />
                         <outputColumn
@@ -5504,7 +5504,7 @@
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Residential_Status_Previous]"
                           dataType="wstr"
-                          length="10"
+                          length="30"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Residential_Status_Previous]"
                           name="Residential_Status_Previous" />
                         <outputColumn
@@ -5600,13 +5600,13 @@
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Capacity]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Capacity]"
                           name="Capacity" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Total_Surplus]"
                           dataType="wstr"
-                          length="10"
+                          length="25"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Total_Surplus]"
                           name="Total_Surplus" />
                         <outputColumn
@@ -5618,7 +5618,7 @@
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Risk_Grade]"
                           dataType="wstr"
-                          length="5"
+                          length="10"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Risk_Grade]"
                           name="Risk_Grade" />
                         <outputColumn
@@ -5714,7 +5714,7 @@
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[am_equity_percent]"
                           dataType="wstr"
-                          length="10"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[am_equity_percent]"
                           name="am_equity_percent" />
                         <outputColumn
@@ -5946,6 +5946,29 @@
           DTS:ObjectName="Constraint 5"
           DTS:To="Package\Foreach Loop Container\MoveFileToArchiveFolder" />
       </DTS:PrecedenceConstraints>
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Foreach Loop Container.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{529D2A7E-2778-49B1-A606-E1D0A62C143B}"
+          DTS:EventID="0"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{E98EF981-423A-4585-909B-CA4B40455943}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables />
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
@@ -5956,6 +5979,49 @@
       </DTS:ForEachVariableMappings>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{0179214F-1A63-495A-BA82-F909E3C10A81}"
+      DTS:EventID="-1"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{4C638955-0921-468F-9BD4-07991A5735C3}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package.EventHandlers[OnError]\Email On Error"
+          DTS:CreationName="Microsoft.SendMailTask"
+          DTS:Description="Send Mail Task"
+          DTS:DTSID="{D604B32C-FCA2-4C5C-B6A5-D4EE2CDB0EC5}"
+          DTS:ExecutableType="Microsoft.SendMailTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Email On Error">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SendMailTask:SendMailTaskData
+              SendMailTask:SMTPServer="{625246DE-B7C0-48D2-A28C-32EEDA439003}"
+              SendMailTask:From="BI_Error_Notification@heartland.co.nz"
+              SendMailTask:To="BI_Error_Notification@heartland.co.nz"
+              SendMailTask:Subject="ERROR : Flat File Ingest Failure on AUKSQLPROD01"
+              SendMailTask:MessageSourceType="Variable"
+              SendMailTask:MessageSource="User::SourceFileName" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -6410,5 +6476,17 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="148,42"
+          Id="Package.EventHandlers[OnError]\Email On Error"
+          TopLeft="428,136" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
