@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="StockCo"
   DTS:PackageType="5"
-  DTS:VersionBuild="75"
-  DTS:VersionGUID="{5090C379-2697-42CC-9918-CE0CF3E3AFC9}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{76B4572A-193F-4616-A48D-1B569E2870B3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -520,6 +520,28 @@
       <DTS:VariableValue
         DTS:DataType="8">stockco_Marac</DTS:VariableValue>
     </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{22384810-A67A-40D0-A348-31653C1FA99E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::StageTableName] + &quot;_Target&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TargetTableName">
+      <DTS:VariableValue
+        DTS:DataType="8">stockco_Marac_Target</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BBAAE87A-BD25-42DB-ABC9-0680A5BADC3F}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;truncate table dbo.&quot; + @[User::StageTableName] + &quot;;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateStageTableStatement">
+      <DTS:VariableValue
+        DTS:DataType="8">truncate table dbo.stockco_Marac;</DTS:VariableValue>
+    </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
@@ -534,10 +556,12 @@
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{A1DE52FF-9ADF-4CD3-8AEF-26DA75DCA52C}"
         DTS:ObjectName="{A1DE52FF-9ADF-4CD3-8AEF-26DA75DCA52C}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SourceFileDirectory]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="\\AUKSQLPROD01\ETL\PROD\FILES\IMPORT\StockCo" />
+              Folder="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\STOCKCO" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -1908,7 +1932,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable">User::StageTableName</property>
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
@@ -1926,7 +1950,7 @@
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">3</property>
+                      typeConverter="AccessMode">1</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -2617,7 +2641,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable">User::StageTableName</property>
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
@@ -2639,7 +2663,7 @@
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">0</property>
+                      typeConverter="AccessMode">1</property>
                     <property
                       dataType="System.String"
                       description="The mappings between the parameters in the SQL command and variables."
@@ -3731,7 +3755,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable">User::TargetTableName</property>
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
@@ -3749,7 +3773,7 @@
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">3</property>
+                      typeConverter="AccessMode">1</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -4426,7 +4450,8 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
-              SQLTask:SqlStatementSource="truncate table dbo.?;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::TruncateStageTableStatement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -4561,8 +4586,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{76A7248E-3B23-4DF8-A285-E8BCE5726D89}"
-          DTS:ObjectName="{76A7248E-3B23-4DF8-A285-E8BCE5726D89}"
+          DTS:DTSID="{7EE6826F-F16B-4866-96EA-5C5E88B5DC84}"
+          DTS:ObjectName="{7EE6826F-F16B-4866-96EA-5C5E88B5DC84}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::SourceFileName" />
       </DTS:ForEachVariableMappings>
@@ -4853,6 +4878,18 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="148,42"
+          Id="Package.EventHandlers[OnError]\Email On Error"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Foreach Loop Container\FileToStage">
     <LayoutInfo>
@@ -4867,47 +4904,13 @@
           Id="Package\Foreach Loop Container\FileToStage\Derived Column"
           TopLeft="386.448983175762,241.188237765091" />
         <NodeLayout
-          Size="135,42"
-          Id="Package\Foreach Loop Container\FileToStage\Stage Table"
-          TopLeft="296,330" />
-        <NodeLayout
           Size="130,42"
           Id="Package\Foreach Loop Container\FileToStage\Row Count"
           TopLeft="437.551022614404,138.552942600712" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\FileToStage.Paths[Derived Column Output]"
-          TopLeft="462.948983175762,283.188237765091">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-99.448983175762,46.811762234909"
-              Start="0,0"
-              End="-99.448983175762,39.311762234909">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.4058811174545" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.4058811174545"
-                    Point2="0,23.4058811174545"
-                    Point3="-4,23.4058811174545" />
-                  <mssgle:LineSegment
-                    End="-95.448983175762,23.4058811174545" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-95.448983175762,23.4058811174545"
-                    Point2="-99.448983175762,23.4058811174545"
-                    Point3="-99.448983175762,27.4058811174545" />
-                  <mssgle:LineSegment
-                    End="-99.448983175762,39.311762234909" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Foreach Loop Container\FileToStage\Stage Table"
+          TopLeft="296,330" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\FileToStage.Paths[Row Count Output 1]"
           TopLeft="502.551022614404,180.552942600712">
@@ -4968,6 +4971,40 @@
                     Point3="400.622450718727,42.3327736748954" />
                   <mssgle:LineSegment
                     End="400.622450718727,69.1655473497909" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\FileToStage.Paths[Derived Column Output]"
+          TopLeft="462.948983175762,283.188237765091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99.448983175762,46.811762234909"
+              Start="0,0"
+              End="-99.448983175762,39.311762234909">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4058811174545" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.4058811174545"
+                    Point2="0,23.4058811174545"
+                    Point3="-4,23.4058811174545" />
+                  <mssgle:LineSegment
+                    End="-95.448983175762,23.4058811174545" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-95.448983175762,23.4058811174545"
+                    Point2="-99.448983175762,23.4058811174545"
+                    Point3="-99.448983175762,27.4058811174545" />
+                  <mssgle:LineSegment
+                    End="-99.448983175762,39.311762234909" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5068,17 +5105,5 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="148,42"
-          Id="Package.EventHandlers[OnError]\Email On Error"
-          TopLeft="60,60" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
