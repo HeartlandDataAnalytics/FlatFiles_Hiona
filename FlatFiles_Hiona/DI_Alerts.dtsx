@@ -1,0 +1,2654 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/26/2023 11:59:43 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="AUKBIJUMP01"
+  DTS:CreatorName="PGC\IkonnikovD"
+  DTS:DTSID="{95FF25F7-3DD0-4DAD-83B8-86E653D917FE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="5129"
+  DTS:ObjectName="DI_Alerts"
+  DTS:PackageType="5"
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{1DAE542A-E383-4F05-84C0-38B32D0FA07F}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DI_Alert_FlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{FF20449D-9076-43CF-9EF1-160085D40625}"
+      DTS:ObjectName="DI_Alert_FlatFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFullPathName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="5129"
+          DTS:HeaderRowDelimiter="_x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\DI\AlertExtract\4-00-0927Wed-AlertExtract.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Application ID"
+              DTS:DTSID="{16E6E4F0-8813-498F-8CB2-61BB41067A1F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sequence Number"
+              DTS:DTSID="{6C293D5A-DCCD-4518-88AC-29AA4D184496}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date Submitted"
+              DTS:DTSID="{B141C994-2321-47DB-A2BD-0DEB2E84C2C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Applicant Firstname"
+              DTS:DTSID="{8FA51805-30C3-4298-9620-C4972C8DE45A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Company Name Applicant Surname"
+              DTS:DTSID="{81156C0A-B838-4346-ADCA-22A3AFE407CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Credit Product"
+              DTS:DTSID="{95AB6BAF-FFAC-41CB-92FF-C90976157922}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Application Status"
+              DTS:DTSID="{0B1EA8E0-934B-47D2-B02A-7FAEE6D9CD37}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Consumer Score"
+              DTS:DTSID="{4CE63BFE-BA13-4B3E-A6C2-1444576E96ED}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Application Score"
+              DTS:DTSID="{88E6ABDA-D8FA-4B0B-9D11-336A7971E8E6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="70"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Alert ID"
+              DTS:DTSID="{2C81D5F9-F6CE-4D53-A836-D3ED05D5F13C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Count"
+              DTS:DTSID="{9E4298BA-4A7A-4C40-BF6F-5A1F650E80DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tier 1 Result"
+              DTS:DTSID="{515A146E-C01C-4757-9316-047CAE14E55A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tier 2 Result"
+              DTS:DTSID="{36C957C4-F0F1-426E-9E2A-7F811B0B4BFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="90"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dealer Name"
+              DTS:DTSID="{8421C3B1-F24A-459C-8D9D-8619683C5F9C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Refinance"
+              DTS:DTSID="{C7755258-EFBF-4163-AD54-A3E24E495F69}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92001EF6-B1FF-4AF2-8BF3-318DBF693BF4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveFileDirectory">
+      <DTS:VariableValue
+        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\ARCHIVE\DI\AlertExtract</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C5F11D65-BA56-4867-9DE5-479A663842BD}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::ArchiveFileDirectory] + &quot;\\&quot; +  @[User::SourceFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ArchiveFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\ARCHIVE\DI\AlertExtract\4-00-0927Wed-AlertExtract.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0B880D7D-A3BC-4D27-B6A9-EA5FC6B1A47B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditLogStageLoadTimeStamp">
+      <DTS:VariableValue
+        DTS:DataType="7">9/27/2023 9:54:47 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0C1677E8-14FF-4651-A734-09E05B8C6A91}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditLogStageRowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A0B2A759-54EB-493B-9AA7-ABF8A159733E}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditLogTargetLoadTimestamp">
+      <DTS:VariableValue
+        DTS:DataType="7">9/27/2023 9:54:43 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1984CB4F-E338-46AF-864E-21E5B5A6E911}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFileDate">
+      <DTS:VariableValue
+        DTS:DataType="7">9/27/2023 9:54:38 AM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9DBF0224-0E57-42F5-8E0E-47D4054E7139}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFileDirectory">
+      <DTS:VariableValue
+        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\DI\AlertExtract</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2885F5A2-D316-45ED-8B5B-E35617875DEA}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">4-00-0927Wed-AlertExtract.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{325F1D15-AB89-4B34-93FA-E208BA74B383}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::SourceFileDirectory] + &quot;\\&quot; +  @[User::SourceFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFullPathName">
+      <DTS:VariableValue
+        DTS:DataType="8">\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\DI\AlertExtract\4-00-0927Wed-AlertExtract.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FFA707CC-8925-4FAE-811C-0D496FB217E2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="StageTableName">
+      <DTS:VariableValue
+        DTS:DataType="8">di_AlertExtract</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{027A67C7-31A1-478B-9B4D-2DBA59F216BC}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::StageTableName] + &quot;_Target&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TargetTableName">
+      <DTS:VariableValue
+        DTS:DataType="8">di_AlertExtract_Target</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F401052C-3670-4A02-8544-53A22855ADF8}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;truncate table dbo.&quot; + @[User::StageTableName] + &quot;;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TruncateStageTableStatement">
+      <DTS:VariableValue
+        DTS:DataType="8">truncate table dbo.di_AlertExtract;</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{f2bd1197-18cb-4669-84f6-cd009aa64306}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{a9c8bae6-ad55-41f4-8229-a5b78d7fa817}"
+        DTS:ObjectName="{A1DE52FF-9ADF-4CD3-8AEF-26DA75DCA52C}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SourceFileDirectory]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\DI\AlertExtract" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="1" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\FileToStage"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{a1265f20-8a98-4671-b954-cc58c5dd3b98}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="FileToStage"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\FileToStage\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\FileToStage\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\FileToStage\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]"
+                          name="FILE_NAME"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::SourceFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::SourceFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_DATE]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_DATE]"
+                          name="FILE_DATE"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_DBDATE)((DT_WSTR,4)([YEAR]([GETDATE]())) + "-" + [SUBSTRING](@[User::SourceFileName],6,2) + "-" + [SUBSTRING](@[User::SourceFileName],8,2))</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_DBDATE)((DT_WSTR,4)(YEAR(GETDATE())) + "-" + SUBSTRING(@[User::SourceFileName],6,2) + "-" + SUBSTRING(@[User::SourceFileName],8,2))</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\FileToStage\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\FileToStage\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="5129"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DI_Alert_FlatFile]"
+                      connectionManagerRefId="Package.ConnectionManagers[DI_Alert_FlatFile]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application ID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Application ID]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application ID]"
+                          name="Application ID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Sequence Number]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sequence Number]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Sequence Number]"
+                          name="Sequence Number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Date Submitted]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date Submitted]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Date Submitted]"
+                          name="Date Submitted"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Applicant Firstname]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Applicant Firstname]"
+                          length="30"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Applicant Firstname]"
+                          name="Applicant Firstname"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Company Name Applicant Surname]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Company Name Applicant Surname]"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Company Name Applicant Surname]"
+                          name="Company Name Applicant Surname"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Product]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Credit Product]"
+                          length="30"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Product]"
+                          name="Credit Product"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application Status]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Application Status]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application Status]"
+                          name="Application Status"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Consumer Score]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Consumer Score]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Consumer Score]"
+                          name="Consumer Score"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application Score]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Application Score]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application Score]"
+                          name="Application Score"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Alert ID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Alert ID]"
+                          length="70"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Alert ID]"
+                          name="Alert ID"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Count]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Count]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Count]"
+                          name="Count"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Tier 1 Result]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Tier 1 Result]"
+                          length="10"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Tier 1 Result]"
+                          name="Tier 1 Result"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Tier 2 Result]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Tier 2 Result]"
+                          length="10"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Tier 2 Result]"
+                          name="Tier 2 Result"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer Name]"
+                          length="90"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer Name]"
+                          name="Dealer Name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinance]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Refinance]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinance]"
+                          name="Refinance"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Application ID]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sequence Number]"
+                          dataType="wstr"
+                          length="50"
+                          name="Sequence Number" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date Submitted]"
+                          dataType="wstr"
+                          length="50"
+                          name="Date Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Applicant Firstname]"
+                          dataType="wstr"
+                          length="30"
+                          name="Applicant Firstname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Company Name Applicant Surname]"
+                          dataType="wstr"
+                          length="100"
+                          name="Company Name Applicant Surname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Credit Product]"
+                          dataType="wstr"
+                          length="30"
+                          name="Credit Product" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Application Status]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application Status" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Consumer Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Consumer Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Application Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Alert ID]"
+                          dataType="wstr"
+                          length="70"
+                          name="Alert ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Count]"
+                          dataType="wstr"
+                          length="50"
+                          name="Count" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Tier 1 Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier 1 Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Tier 2 Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier 2 Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Dealer Name]"
+                          dataType="wstr"
+                          length="90"
+                          name="Dealer Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Refinance]"
+                          dataType="wstr"
+                          length="50"
+                          name="Refinance" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\FileToStage\Row Count"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::AuditLogStageRowCount</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\FileToStage\Row Count.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\FileToStage\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Foreach Loop Container\FileToStage\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\FileToStage\Stage Table"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Stage Table"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[Harmoney_Cash]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable">User::StageTableName</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\FileToStage\Stage Table.Connections[OleDbConnection]"
+                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Count]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Count"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Count]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Count]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Refinance]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Refinance"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Refinance]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Refinance]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[FILE_NAME]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="FILE_NAME"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_NAME]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[FILE_DATE]"
+                          cachedDataType="dbDate"
+                          cachedName="FILE_DATE"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output].Columns[FILE_DATE]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Application ID]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Application ID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Application_ID]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Sequence Number]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Sequence Number"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Sequence_Number]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Sequence Number]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Date Submitted]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Date Submitted"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Date_Submitted]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Date Submitted]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Applicant Firstname]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Applicant Firstname"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Applicant_Firstname]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Applicant Firstname]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Company Name Applicant Surname]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Company Name Applicant Surname"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Company_Name_Applicant_Surname]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Company Name Applicant Surname]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Credit Product]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Credit Product"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Product]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Credit Product]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Application Status]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Application Status"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Application_Status]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application Status]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Consumer Score]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Consumer Score"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Consumer_Score]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Consumer Score]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Application Score]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Application Score"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Application_Score]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Application Score]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Alert ID]"
+                          cachedDataType="wstr"
+                          cachedLength="70"
+                          cachedName="Alert ID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Alert_ID]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Alert ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Tier 1 Result]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Tier 1 Result"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Tier_1_Result]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Tier 1 Result]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Dealer Name]"
+                          cachedDataType="wstr"
+                          cachedLength="90"
+                          cachedName="Dealer Name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Dealer_Name]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Dealer Name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].Columns[Tier 2 Result]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Tier 2 Result"
+                          externalMetadataColumnId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Tier_2_Result]"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output].Columns[Tier 2 Result]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
+                          dataType="wstr"
+                          length="80"
+                          name="FILE_NAME" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
+                          dataType="dbDate"
+                          name="FILE_DATE" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Application_ID]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Sequence_Number]"
+                          dataType="wstr"
+                          length="50"
+                          name="Sequence_Number" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Date_Submitted]"
+                          dataType="wstr"
+                          length="50"
+                          name="Date_Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Applicant_Firstname]"
+                          dataType="wstr"
+                          length="30"
+                          name="Applicant_Firstname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Company_Name_Applicant_Surname]"
+                          dataType="wstr"
+                          length="100"
+                          name="Company_Name_Applicant_Surname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Product]"
+                          dataType="wstr"
+                          length="30"
+                          name="Credit_Product" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Application_Status]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_Status" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Consumer_Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Consumer_Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Application_Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Alert_ID]"
+                          dataType="wstr"
+                          length="70"
+                          name="Alert_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Count]"
+                          dataType="wstr"
+                          length="50"
+                          name="Count" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Tier_1_Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier_1_Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Tier_2_Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier_2_Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Dealer_Name]"
+                          dataType="wstr"
+                          length="90"
+                          name="Dealer_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Refinance]"
+                          dataType="wstr"
+                          length="50"
+                          name="Refinance" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\FileToStage\Stage Table.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Stage Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\FileToStage\Stage Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\FileToStage\Stage Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\FileToStage.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\FileToStage\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\FileToStage.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\FileToStage\Row Count.Inputs[Row Count Input 1]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\FileToStage\Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\FileToStage.Paths[Row Count Output 1]"
+                  endId="Package\Foreach Loop Container\FileToStage\Derived Column.Inputs[Derived Column Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Foreach Loop Container\FileToStage\Row Count.Outputs[Row Count Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\MoveFileToArchiveFolder"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="File System Task"
+          DTS:DTSID="{419e4ed5-dbc4-4101-843b-9f39011ab9db}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="MoveFileToArchiveFolder"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="User::SourceFullPathName"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::ArchiveFileDirectory"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\StageToTarget"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{ffa09d31-bef1-4579-9cb6-d1208d38b59e}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="StageToTarget"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="Target Table"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable">User::TargetTableName</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FILE_NAME]"
+                          cachedDataType="wstr"
+                          cachedLength="80"
+                          cachedName="FILE_NAME"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_NAME]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FILE_DATE]"
+                          cachedDataType="dbDate"
+                          cachedName="FILE_DATE"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_DATE]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Application_ID]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Application_ID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Application_ID]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sequence_Number]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Sequence_Number"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sequence_Number]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sequence_Number]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date_Submitted]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Date_Submitted"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Submitted]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_Submitted]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Applicant_Firstname]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Applicant_Firstname"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Applicant_Firstname]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Applicant_Firstname]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Company_Name_Applicant_Surname]"
+                          cachedDataType="wstr"
+                          cachedLength="100"
+                          cachedName="Company_Name_Applicant_Surname"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company_Name_Applicant_Surname]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Company_Name_Applicant_Surname]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Credit_Product]"
+                          cachedDataType="wstr"
+                          cachedLength="30"
+                          cachedName="Credit_Product"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Product]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit_Product]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Application_Status]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Application_Status"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Application_Status]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_Status]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Consumer_Score]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Consumer_Score"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Consumer_Score]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Consumer_Score]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Application_Score]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Application_Score"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Application_Score]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_Score]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Alert_ID]"
+                          cachedDataType="wstr"
+                          cachedLength="70"
+                          cachedName="Alert_ID"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Alert_ID]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Alert_ID]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Count]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Count"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Count]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Count]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tier_1_Result]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Tier_1_Result"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tier_1_Result]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tier_1_Result]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Tier_2_Result]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Tier_2_Result"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tier_2_Result]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tier_2_Result]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Dealer_Name]"
+                          cachedDataType="wstr"
+                          cachedLength="90"
+                          cachedName="Dealer_Name"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dealer_Name]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Dealer_Name]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Refinance]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Refinance"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Refinance]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Refinance]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FILE_NAME]"
+                          dataType="wstr"
+                          length="80"
+                          name="FILE_NAME" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
+                          dataType="dbDate"
+                          name="FILE_DATE" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Application_ID]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sequence_Number]"
+                          dataType="wstr"
+                          length="50"
+                          name="Sequence_Number" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_Submitted]"
+                          dataType="wstr"
+                          length="50"
+                          name="Date_Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Applicant_Firstname]"
+                          dataType="wstr"
+                          length="30"
+                          name="Applicant_Firstname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Company_Name_Applicant_Surname]"
+                          dataType="wstr"
+                          length="100"
+                          name="Company_Name_Applicant_Surname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Credit_Product]"
+                          dataType="wstr"
+                          length="30"
+                          name="Credit_Product" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Application_Status]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_Status" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Consumer_Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Consumer_Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Application_Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Alert_ID]"
+                          dataType="wstr"
+                          length="70"
+                          name="Alert_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Count]"
+                          dataType="wstr"
+                          length="50"
+                          name="Count" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tier_1_Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier_1_Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tier_2_Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier_2_Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dealer_Name]"
+                          dataType="wstr"
+                          length="90"
+                          name="Dealer_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Refinance]"
+                          dataType="wstr"
+                          length="50"
+                          name="Refinance" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="Stage Table"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable">User::StageTableName</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">1</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_NAME]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FILE_NAME]"
+                          length="80"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_NAME]"
+                          name="FILE_NAME"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_DATE]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FILE_DATE]"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[FILE_DATE]"
+                          name="FILE_DATE"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_ID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Application_ID]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_ID]"
+                          name="Application_ID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sequence_Number]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sequence_Number]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sequence_Number]"
+                          name="Sequence_Number"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_Submitted]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_Submitted]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date_Submitted]"
+                          name="Date_Submitted"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Applicant_Firstname]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Applicant_Firstname]"
+                          length="30"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Applicant_Firstname]"
+                          name="Applicant_Firstname"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Company_Name_Applicant_Surname]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Company_Name_Applicant_Surname]"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Company_Name_Applicant_Surname]"
+                          name="Company_Name_Applicant_Surname"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit_Product]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Credit_Product]"
+                          length="30"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Credit_Product]"
+                          name="Credit_Product"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_Status]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Application_Status]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_Status]"
+                          name="Application_Status"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Consumer_Score]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Consumer_Score]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Consumer_Score]"
+                          name="Consumer_Score"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_Score]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Application_Score]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Application_Score]"
+                          name="Application_Score"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Alert_ID]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Alert_ID]"
+                          length="70"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Alert_ID]"
+                          name="Alert_ID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Count]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Count]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Count]"
+                          name="Count"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tier_1_Result]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tier_1_Result]"
+                          length="10"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tier_1_Result]"
+                          name="Tier_1_Result"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tier_2_Result]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tier_2_Result]"
+                          length="10"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tier_2_Result]"
+                          name="Tier_2_Result"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Dealer_Name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Dealer_Name]"
+                          length="90"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Dealer_Name]"
+                          name="Dealer_Name"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Refinance]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Refinance]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].Columns[Refinance]"
+                          name="Refinance"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FILE_NAME]"
+                          dataType="wstr"
+                          length="80"
+                          name="FILE_NAME" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FILE_DATE]"
+                          dataType="dbDate"
+                          name="FILE_DATE" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Application_ID]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sequence_Number]"
+                          dataType="wstr"
+                          length="50"
+                          name="Sequence_Number" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date_Submitted]"
+                          dataType="wstr"
+                          length="50"
+                          name="Date_Submitted" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Applicant_Firstname]"
+                          dataType="wstr"
+                          length="30"
+                          name="Applicant_Firstname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Company_Name_Applicant_Surname]"
+                          dataType="wstr"
+                          length="100"
+                          name="Company_Name_Applicant_Surname" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Credit_Product]"
+                          dataType="wstr"
+                          length="30"
+                          name="Credit_Product" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Application_Status]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_Status" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Consumer_Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Consumer_Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Application_Score]"
+                          dataType="wstr"
+                          length="50"
+                          name="Application_Score" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Alert_ID]"
+                          dataType="wstr"
+                          length="70"
+                          name="Alert_ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Count]"
+                          dataType="wstr"
+                          length="50"
+                          name="Count" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tier_1_Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier_1_Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tier_2_Result]"
+                          dataType="wstr"
+                          length="10"
+                          name="Tier_2_Result" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Dealer_Name]"
+                          dataType="wstr"
+                          length="90"
+                          name="Dealer_Name" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Refinance]"
+                          dataType="wstr"
+                          length="50"
+                          name="Refinance" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FILE_NAME]"
+                          dataType="wstr"
+                          length="80"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FILE_NAME]"
+                          name="FILE_NAME" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FILE_DATE]"
+                          dataType="dbDate"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FILE_DATE]"
+                          name="FILE_DATE" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Application_ID]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Application_ID]"
+                          name="Application_ID" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sequence_Number]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sequence_Number]"
+                          name="Sequence_Number" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_Submitted]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date_Submitted]"
+                          name="Date_Submitted" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Applicant_Firstname]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Applicant_Firstname]"
+                          name="Applicant_Firstname" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Company_Name_Applicant_Surname]"
+                          dataType="wstr"
+                          length="100"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Company_Name_Applicant_Surname]"
+                          name="Company_Name_Applicant_Surname" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Credit_Product]"
+                          dataType="wstr"
+                          length="30"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Credit_Product]"
+                          name="Credit_Product" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Application_Status]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Application_Status]"
+                          name="Application_Status" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Consumer_Score]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Consumer_Score]"
+                          name="Consumer_Score" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Application_Score]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Application_Score]"
+                          name="Application_Score" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Alert_ID]"
+                          dataType="wstr"
+                          length="70"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Alert_ID]"
+                          name="Alert_ID" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Count]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Count]"
+                          name="Count" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tier_1_Result]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tier_1_Result]"
+                          name="Tier_1_Result" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tier_2_Result]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tier_2_Result]"
+                          name="Tier_2_Result" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Dealer_Name]"
+                          dataType="wstr"
+                          length="90"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Dealer_Name]"
+                          name="Dealer_Name" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Refinance]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Refinance]"
+                          name="Refinance" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\StageToTarget.Paths[OLE DB Source Output]"
+                  endId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Truncate Stage Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{e27d3c94-1000-4f93-8bbf-4051d33fa5fd}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate Stage Table"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
+              SQLTask:SqlStmtSourceType="Variable"
+              SQLTask:SqlStatementSource="User::TruncateStageTableStatement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::StageTableName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\UpdateLog-StageIngestCount"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{26c33a12-9702-4edc-aa2a-b2eae4d6da9d}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="UpdateLog-StageIngestCount"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="INSERT INTO dbo.INGEST_LOG VALUES&#xA;(?, CURRENT_TIMESTAMP, 'Loaded to Stage ' + cast(? as varchar(100)) )&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::SourceFileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::AuditLogStageRowCount"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="131"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\UpdateLog-StartFileIngest"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3c1acc5e-5bf1-495c-8aa5-4eb10e6f8f24}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="UpdateLog-StartFileIngest"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="INSERT INTO dbo.INGEST_LOG VALUES&#xA;(?, CURRENT_TIMESTAMP, 'Start FIle Ingest')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::SourceFileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\UpdateLog-TargetLoad"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{f17653a8-9de0-42b6-ad44-33bcb56e30a9}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="UpdateLog-TargetLoad"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
+              SQLTask:BypassPrepare="False"
+              SQLTask:SqlStatementSource="INSERT INTO dbo.INGEST_LOG VALUES&#xA;(?, CURRENT_TIMESTAMP, 'Loaded to Target')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::SourceFileName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{cb867267-5c8a-444f-be51-73f225143f4c}"
+          DTS:From="Package\Foreach Loop Container\UpdateLog-StartFileIngest"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Foreach Loop Container\Truncate Stage Table" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{9952c20a-6a9c-436b-b468-184185737c96}"
+          DTS:From="Package\Foreach Loop Container\FileToStage"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Foreach Loop Container\UpdateLog-StageIngestCount" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{2b2702df-cb3b-4702-b1cf-3101c12eb4e4}"
+          DTS:From="Package\Foreach Loop Container\UpdateLog-StageIngestCount"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Foreach Loop Container\StageToTarget" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 3]"
+          DTS:CreationName=""
+          DTS:DTSID="{8c83668e-207f-4bbb-9741-7f84f49eec00}"
+          DTS:From="Package\Foreach Loop Container\StageToTarget"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 3"
+          DTS:To="Package\Foreach Loop Container\UpdateLog-TargetLoad" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{eb46ba6e-4dde-4a67-840a-bd28c25a29d1}"
+          DTS:From="Package\Foreach Loop Container\Truncate Stage Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 4"
+          DTS:To="Package\Foreach Loop Container\FileToStage" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{8a44b003-4bde-4bfc-bccc-fff469886c31}"
+          DTS:From="Package\Foreach Loop Container\UpdateLog-TargetLoad"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 5"
+          DTS:To="Package\Foreach Loop Container\MoveFileToArchiveFolder" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{61B26058-DD47-49DD-BABB-46FCE611346E}"
+          DTS:ObjectName="{61B26058-DD47-49DD-BABB-46FCE611346E}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::SourceFileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Foreach Loop Container\FileToStage"
+          TopLeft="197.952380628002,192.019607857437" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\Foreach Loop Container\MoveFileToArchiveFolder"
+          TopLeft="244.428568302369,567.666665511973" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Foreach Loop Container\StageToTarget"
+          TopLeft="141.238095157,362.68627428101" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Foreach Loop Container\Truncate Stage Table"
+          TopLeft="85,112" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Foreach Loop Container\UpdateLog-StageIngestCount"
+          TopLeft="292,278" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Foreach Loop Container\UpdateLog-StartFileIngest"
+          TopLeft="176.181818181818,23.7272727272727" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Foreach Loop Container\UpdateLog-TargetLoad"
+          TopLeft="208.428568302369,462.666665511973" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="277.181818181818,65.7272727272727">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-110.681818181818,46.2727272727273"
+              Start="0,0"
+              End="-110.681818181818,38.7727272727273">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.1363636363636" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.1363636363636"
+                    Point2="0,23.1363636363636"
+                    Point3="-4,23.1363636363636" />
+                  <mssgle:LineSegment
+                    End="-106.681818181818,23.1363636363636" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-106.681818181818,23.1363636363636"
+                    Point2="-110.681818181818,23.1363636363636"
+                    Point3="-110.681818181818,27.1363636363636" />
+                  <mssgle:LineSegment
+                    End="-110.681818181818,38.7727272727273" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="264.952380628002,234.019607857437">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135.547619371998,43.980392142563"
+              Start="0,0"
+              End="135.547619371998,36.480392142563">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.9901960712815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.9901960712815"
+                    Point2="0,21.9901960712815"
+                    Point3="4,21.9901960712815" />
+                  <mssgle:LineSegment
+                    End="131.547619371998,21.9901960712815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131.547619371998,21.9901960712815"
+                    Point2="135.547619371998,21.9901960712815"
+                    Point3="135.547619371998,25.9901960712815" />
+                  <mssgle:LineSegment
+                    End="135.547619371998,36.480392142563" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="400.5,320">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-179.261904843,42.68627428101"
+              Start="0,0"
+              End="-179.261904843,35.18627428101">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.343137140505" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.343137140505"
+                    Point2="0,21.343137140505"
+                    Point3="-4,21.343137140505" />
+                  <mssgle:LineSegment
+                    End="-175.261904843,21.343137140505" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-175.261904843,21.343137140505"
+                    Point2="-179.261904843,21.343137140505"
+                    Point3="-179.261904843,25.343137140505" />
+                  <mssgle:LineSegment
+                    End="-179.261904843,35.18627428101" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 3]"
+          TopLeft="221.238095157,404.68627428101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.6904731453686,57.9803912309629"
+              Start="0,0"
+              End="80.6904731453686,50.4803912309629">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.9901956154815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.9901956154815"
+                    Point2="0,28.9901956154815"
+                    Point3="4,28.9901956154815" />
+                  <mssgle:LineSegment
+                    End="76.6904731453686,28.9901956154815" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.6904731453686,28.9901956154815"
+                    Point2="80.6904731453686,28.9901956154815"
+                    Point3="80.6904731453686,32.9901956154815" />
+                  <mssgle:LineSegment
+                    End="80.6904731453686,50.4803912309629" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 4]"
+          TopLeft="166.5,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.452380628002,38.019607857437"
+              Start="0,0"
+              End="98.452380628002,30.519607857437">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0098039287185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0098039287185"
+                    Point2="0,19.0098039287185"
+                    Point3="4,19.0098039287185" />
+                  <mssgle:LineSegment
+                    End="94.452380628002,19.0098039287185" />
+                  <mssgle:CubicBezierSegment
+                    Point1="94.452380628002,19.0098039287185"
+                    Point2="98.452380628002,19.0098039287185"
+                    Point3="98.452380628002,23.0098039287185" />
+                  <mssgle:LineSegment
+                    End="98.452380628002,30.519607857437" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 5]"
+          TopLeft="301.928568302369,504.666665511973">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40.5,62.9999999999999"
+              Start="0,0"
+              End="40.5,55.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.5"
+                    Point2="0,31.5"
+                    Point3="4,31.5" />
+                  <mssgle:LineSegment
+                    End="36.5,31.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.5,31.5"
+                    Point2="40.5,31.5"
+                    Point3="40.5,35.5" />
+                  <mssgle:LineSegment
+                    End="40.5,55.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="796,665"
+          Size="796,708"
+          Id="Package\Foreach Loop Container"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\FileToStage">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Foreach Loop Container\FileToStage\Row Count"
+          TopLeft="113.551022614404,91.552942600712" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Foreach Loop Container\FileToStage\Stage Table"
+          TopLeft="336,236" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Foreach Loop Container\FileToStage\Derived Column"
+          TopLeft="200,161" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Foreach Loop Container\FileToStage\Flat File Source"
+          TopLeft="24.4285718956773,16.8873952509211" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\FileToStage.Paths[Flat File Source Output]"
+          TopLeft="99.9285718956773,58.8873952509211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.6224507187267,32.6655473497909"
+              Start="0,0"
+              End="78.6224507187267,25.1655473497909">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.3327736748954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.3327736748954"
+                    Point2="0,16.3327736748954"
+                    Point3="4,16.3327736748954" />
+                  <mssgle:LineSegment
+                    End="74.6224507187267,16.3327736748954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="74.6224507187267,16.3327736748954"
+                    Point2="78.6224507187267,16.3327736748954"
+                    Point3="78.6224507187267,20.3327736748954" />
+                  <mssgle:LineSegment
+                    End="78.6224507187267,25.1655473497909" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\FileToStage.Paths[Derived Column Output]"
+          TopLeft="277,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.5,33"
+              Start="0,0"
+              End="126.5,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="4,16.5" />
+                  <mssgle:LineSegment
+                    End="122.5,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.5,16.5"
+                    Point2="126.5,16.5"
+                    Point3="126.5,20.5" />
+                  <mssgle:LineSegment
+                    End="126.5,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\FileToStage.Paths[Row Count Output 1]"
+          TopLeft="178.551022614404,133.552942600712">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.448977385596,27.447057399288"
+              Start="0,0"
+              End="98.448977385596,19.947057399288">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.72352869964401" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.72352869964401"
+                    Point2="0,13.723528699644"
+                    Point3="4,13.723528699644" />
+                  <mssgle:LineSegment
+                    End="94.448977385596,13.723528699644" />
+                  <mssgle:CubicBezierSegment
+                    Point1="94.448977385596,13.723528699644"
+                    Point2="98.448977385596,13.723528699644"
+                    Point3="98.448977385596,17.723528699644" />
+                  <mssgle:LineSegment
+                    End="98.448977385596,19.947057399288" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\FileToStage\Stage Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\StageToTarget">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Foreach Loop Container\StageToTarget\OLE DB Source"
+          TopLeft="155,155" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Foreach Loop Container\StageToTarget\OLE DB Destination"
+          TopLeft="481,206" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\StageToTarget.Paths[OLE DB Source Output]"
+          TopLeft="305,176">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="176,51"
+              Start="0,0"
+              End="168.5,51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="84,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84,0"
+                    Point2="88,0"
+                    Point3="88,4" />
+                  <mssgle:LineSegment
+                    End="88,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="88,47"
+                    Point2="88,51"
+                    Point3="92,51" />
+                  <mssgle:LineSegment
+                    End="168.5,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\StageToTarget\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\StageToTarget\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
