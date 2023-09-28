@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Cash"
   DTS:PackageType="5"
-  DTS:VersionBuild="59"
-  DTS:VersionGUID="{092FFC9A-8FDA-4A59-86DC-E471B93C9D88}">
+  DTS:VersionBuild="66"
+  DTS:VersionGUID="{845530C7-D172-4B23-AD8E-B319C2B8786D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -220,8 +220,11 @@
       DTS:ObjectName="Foreach Loop Container">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:Description="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\Harmoney\Cash_v2"
         DTS:DTSID="{767b801d-d594-40f4-80f0-027b0c044faf}"
         DTS:ObjectName="{A1DE52FF-9ADF-4CD3-8AEF-26DA75DCA52C}">
+        <DTS:PropertyExpression
+          DTS:Name="Description">@[User::SourceFileDirectory]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
@@ -251,14 +254,7 @@
             <SQLTask:SqlTaskData
               SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
               SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="User::TruncateStageTableStatement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::StageTableName"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
+              SQLTask:SqlStatementSource="User::TruncateStageTableStatement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -637,7 +633,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable">User::StageTableName</property>
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
@@ -655,7 +651,7 @@
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">3</property>
+                      typeConverter="AccessMode">1</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -762,7 +758,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Harmoney_Account_Number]"
                           dataType="wstr"
-                          length="8"
+                          length="20"
                           name="Harmoney_Account_Number" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\FileToStage\Stage Table.Inputs[OLE DB Destination Input].ExternalColumns[Transaction_Date]"
@@ -885,7 +881,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable">User::StageTableName</property>
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
@@ -907,7 +903,7 @@
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">0</property>
+                      typeConverter="AccessMode">1</property>
                     <property
                       dataType="System.String"
                       description="The mappings between the parameters in the SQL command and variables."
@@ -938,13 +934,12 @@
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_DATE]"
-                          dataType="dbTimeStamp2"
+                          dataType="dbDate"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[FILE_DATE]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_DATE]"
                           name="FILE_DATE"
-                          scale="7"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[AsAtDateTime]"
@@ -962,7 +957,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[Harmoney_Account_Number]"
-                          length="8"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[Harmoney_Account_Number]"
                           name="Harmoney_Account_Number"
                           truncationRowDisposition="FailComponent" />
@@ -1015,9 +1010,8 @@
                           name="FILE_NAME" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[FILE_DATE]"
-                          dataType="dbTimeStamp2"
-                          name="FILE_DATE"
-                          scale="7" />
+                          dataType="dbDate"
+                          name="FILE_DATE" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[AsAtDateTime]"
                           dataType="wstr"
@@ -1026,7 +1020,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[Harmoney_Account_Number]"
                           dataType="wstr"
-                          length="8"
+                          length="20"
                           name="Harmoney_Account_Number" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].ExternalColumns[Transaction_Date]"
@@ -1062,10 +1056,9 @@
                           name="FILE_NAME" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[FILE_DATE]"
-                          dataType="dbTimeStamp2"
+                          dataType="dbDate"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[FILE_DATE]"
-                          name="FILE_DATE"
-                          scale="7" />
+                          name="FILE_DATE" />
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[AsAtDateTime]"
                           dataType="wstr"
@@ -1075,7 +1068,7 @@
                         <outputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[Harmoney_Account_Number]"
                           dataType="wstr"
-                          length="8"
+                          length="20"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Error Output].Columns[Harmoney_Account_Number]"
                           name="Harmoney_Account_Number" />
                         <outputColumn
@@ -1138,7 +1131,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
-                      name="OpenRowsetVariable"></property>
+                      name="OpenRowsetVariable">User::TargetTableName</property>
                     <property
                       dataType="System.String"
                       description="The SQL command to be executed."
@@ -1156,7 +1149,7 @@
                       dataType="System.Int32"
                       description="Specifies the mode used to access the database."
                       name="AccessMode"
-                      typeConverter="AccessMode">3</property>
+                      typeConverter="AccessMode">1</property>
                     <property
                       dataType="System.Boolean"
                       description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1199,9 +1192,8 @@
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_NAME]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].Columns[FILE_DATE]"
-                          cachedDataType="dbTimeStamp2"
+                          cachedDataType="dbDate"
                           cachedName="FILE_DATE"
-                          cachedScale="7"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[FILE_DATE]" />
                         <inputColumn
@@ -1214,7 +1206,7 @@
                         <inputColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].Columns[Harmoney_Account_Number]"
                           cachedDataType="wstr"
-                          cachedLength="8"
+                          cachedLength="20"
                           cachedName="Harmoney_Account_Number"
                           externalMetadataColumnId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[Harmoney_Account_Number]"
                           lineageId="Package\Foreach Loop Container\StageToTarget\StageTable.Outputs[OLE DB Source Output].Columns[Harmoney_Account_Number]" />
@@ -1255,9 +1247,8 @@
                           name="FILE_NAME" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[FILE_DATE]"
-                          dataType="dbTimeStamp2"
-                          name="FILE_DATE"
-                          scale="7" />
+                          dataType="dbDate"
+                          name="FILE_DATE" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[AsAtDateTime]"
                           dataType="wstr"
@@ -1266,7 +1257,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[Harmoney_Account_Number]"
                           dataType="wstr"
-                          length="8"
+                          length="20"
                           name="Harmoney_Account_Number" />
                         <externalMetadataColumn
                           refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Inputs[OLE DB Destination Input].ExternalColumns[Transaction_Date]"
@@ -1458,8 +1449,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{B82F2C0B-DEBB-4972-9A87-C76967CFC7AA}"
-          DTS:ObjectName="{B82F2C0B-DEBB-4972-9A87-C76967CFC7AA}"
+          DTS:DTSID="{099113BD-5349-46A5-9402-F4662E37CB98}"
+          DTS:ObjectName="{099113BD-5349-46A5-9402-F4662E37CB98}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::SourceFileName" />
       </DTS:ForEachVariableMappings>
@@ -1762,61 +1753,39 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="148,42"
+          Id="Package.EventHandlers[OnError]\Email On Error"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Foreach Loop Container\FileToStage">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153,42"
-          Id="Package\Foreach Loop Container\FileToStage\Derived Column"
-          TopLeft="240.448983175762,224.188237765091" />
+          Size="135,42"
+          Id="Package\Foreach Loop Container\FileToStage\Stage Table"
+          TopLeft="370,319" />
         <NodeLayout
           Size="130,42"
           Id="Package\Foreach Loop Container\FileToStage\Row Count"
           TopLeft="151.551022614404,132.552942600712" />
         <NodeLayout
-          Size="135,42"
-          Id="Package\Foreach Loop Container\FileToStage\Stage Table"
-          TopLeft="370,319" />
+          Size="153,42"
+          Id="Package\Foreach Loop Container\FileToStage\Derived Column"
+          TopLeft="240.448983175762,224.188237765091" />
         <NodeLayout
           Size="151,42"
           Id="Package\Foreach Loop Container\FileToStage\Flat File Source"
           TopLeft="26.4285718956773,19.8873952509211" />
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\FileToStage.Paths[Derived Column Output]"
-          TopLeft="316.948983175762,266.188237765091">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="120.551016824238,52.811762234909"
-              Start="0,0"
-              End="120.551016824238,45.311762234909">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.4058811174545" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.4058811174545"
-                    Point2="0,26.4058811174545"
-                    Point3="4,26.4058811174545" />
-                  <mssgle:LineSegment
-                    End="116.551016824238,26.4058811174545" />
-                  <mssgle:CubicBezierSegment
-                    Point1="116.551016824238,26.4058811174545"
-                    Point2="120.551016824238,26.4058811174545"
-                    Point3="120.551016824238,30.4058811174545" />
-                  <mssgle:LineSegment
-                    End="120.551016824238,45.311762234909" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\FileToStage.Paths[Row Count Output 1]"
           TopLeft="216.551022614404,174.552942600712">
@@ -1885,6 +1854,40 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\FileToStage.Paths[Derived Column Output]"
+          TopLeft="316.948983175762,266.188237765091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.551016824238,52.811762234909"
+              Start="0,0"
+              End="120.551016824238,45.311762234909">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.4058811174545" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.4058811174545"
+                    Point2="0,26.4058811174545"
+                    Point3="4,26.4058811174545" />
+                  <mssgle:LineSegment
+                    End="116.551016824238,26.4058811174545" />
+                  <mssgle:CubicBezierSegment
+                    Point1="116.551016824238,26.4058811174545"
+                    Point2="120.551016824238,26.4058811174545"
+                    Point3="120.551016824238,30.4058811174545" />
+                  <mssgle:LineSegment
+                    End="120.551016824238,45.311762234909" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1907,13 +1910,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="131,42"
-          Id="Package\Foreach Loop Container\StageToTarget\StageTable"
-          TopLeft="112,55" />
-        <NodeLayout
           Size="136,42"
           Id="Package\Foreach Loop Container\StageToTarget\TargetTable"
           TopLeft="425,87" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Foreach Loop Container\StageToTarget\StageTable"
+          TopLeft="112,55" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\StageToTarget.Paths[OLE DB Source Output]"
           TopLeft="243,76">
@@ -1977,17 +1980,5 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="148,42"
-          Id="Package.EventHandlers[OnError]\Email On Error"
-          TopLeft="60,60" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Position"
   DTS:PackageType="5"
-  DTS:VersionBuild="94"
-  DTS:VersionGUID="{5170232E-82B0-4B0B-B206-6D156C15C425}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{08862066-241D-4B23-B757-6AA05FEE3178}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -899,10 +899,12 @@
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{bbc3f7c4-0662-4e10-a9d0-b9e7c216e982}"
         DTS:ObjectName="{A1DE52FF-9ADF-4CD3-8AEF-26DA75DCA52C}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::SourceFileDirectory]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="\\Auksqlprod01\ETL\PROD\FILES\IMPORT\Harmoney\Position_v2" />
+              Folder="\\AUKSQLPROD01\etl\PROD\FILES\IMPORT\Harmoney\Position_v2" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -7467,8 +7469,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{1297E5EE-5BA1-431A-BDA3-9A393CAF3777}"
-          DTS:ObjectName="{1297E5EE-5BA1-431A-BDA3-9A393CAF3777}"
+          DTS:DTSID="{501DC558-8F08-4236-80B1-B17C61C94957}"
+          DTS:ObjectName="{501DC558-8F08-4236-80B1-B17C61C94957}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::SourceFileName" />
       </DTS:ForEachVariableMappings>
@@ -7771,6 +7773,18 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="148,42"
+          Id="Package.EventHandlers[OnError]\Email On Error"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Foreach Loop Container\FileToStage">
     <LayoutInfo>
@@ -7959,17 +7973,5 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="148,42"
-          Id="Package.EventHandlers[OnError]\Email On Error"
-          TopLeft="60,60" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
