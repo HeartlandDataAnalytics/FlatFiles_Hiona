@@ -11,8 +11,8 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Transactions"
   DTS:PackageType="5"
-  DTS:VersionBuild="58"
-  DTS:VersionGUID="{F20D91B8-9380-46B8-8D31-9DFC2D97BE53}">
+  DTS:VersionBuild="61"
+  DTS:VersionGUID="{84D48849-8B2D-4D66-A98D-E1BC4447AB4E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3407,14 +3407,7 @@
             <SQLTask:SqlTaskData
               SQLTask:Connection="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
               SQLTask:SqlStmtSourceType="Variable"
-              SQLTask:SqlStatementSource="User::TruncateStageTableStatement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::StageTableName"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="129"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
+              SQLTask:SqlStatementSource="User::TruncateStageTableStatement" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3853,6 +3846,18 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <DtsEventHandler
+    design-time-name="Package.EventHandlers[OnError]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="148,42"
+          Id="Package.EventHandlers[OnError]\Email On Error"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Foreach Loop Container\FileToStage">
     <LayoutInfo>
@@ -4041,17 +4046,5 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package.EventHandlers[OnError]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="148,42"
-          Id="Package.EventHandlers[OnError]\Email On Error"
-          TopLeft="60,60" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
