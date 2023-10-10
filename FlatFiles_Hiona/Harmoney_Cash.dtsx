@@ -11,11 +11,31 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Cash"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{845530C7-D172-4B23-AD8E-B319C2B8786D}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{8F550545-3492-491A-8FC7-542651149C97}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
+      DTS:ObjectName="AUKSQLPROD01 SNFLK_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=AUKSQLPROD01;Initial Catalog=SNFLK_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Email]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{625246DE-B7C0-48D2-A28C-32EEDA439003}"
+      DTS:ObjectName="Email">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=AUKEXCH05;UseWindowsAuthentication=False;EnableSsl=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Harmoney_Cash_FlatFile]"
       DTS:CreationName="FLATFILE"
@@ -672,8 +692,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\FileToStage\Stage Table.Connections[OleDbConnection]"
-                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerID="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerRefId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -912,8 +932,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\StageToTarget\StageTable.Connections[OleDbConnection]"
-                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerID="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerRefId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1170,8 +1190,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\StageToTarget\TargetTable.Connections[OleDbConnection]"
-                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerID="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerRefId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1512,31 +1532,31 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
+          Size="163.2,41.6"
           Id="Package\Foreach Loop Container\Execute SQL Task"
           TopLeft="85,112" />
         <NodeLayout
-          Size="134,42"
+          Size="134.4,41.6"
           Id="Package\Foreach Loop Container\FileToStage"
           TopLeft="196.952380628002,192.019607857437" />
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\Foreach Loop Container\MoveFileToArchiveFolder"
           TopLeft="244.428568302369,567.666665511973" />
         <NodeLayout
-          Size="160,42"
+          Size="160,41.6"
           Id="Package\Foreach Loop Container\StageToTarget"
           TopLeft="141.238095157,362.68627428101" />
         <NodeLayout
-          Size="217,42"
+          Size="216.8,41.6"
           Id="Package\Foreach Loop Container\UpdateLog-StageIngestCount"
           TopLeft="292,278" />
         <NodeLayout
-          Size="202,42"
+          Size="201.6,41.6"
           Id="Package\Foreach Loop Container\UpdateLog-StartFileIngest"
           TopLeft="176.181818181818,23.7272727272727" />
         <NodeLayout
-          Size="187,42"
+          Size="187.2,41.6"
           Id="Package\Foreach Loop Container\UpdateLog-TargetLoad"
           TopLeft="208.428568302369,462.666665511973" />
         <EdgeLayout
@@ -1746,7 +1766,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="796,665"
+          PanelSize="796,664.8"
           Size="796,708"
           Id="Package\Foreach Loop Container"
           TopLeft="207,119" />

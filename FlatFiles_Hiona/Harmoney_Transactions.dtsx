@@ -11,11 +11,31 @@
   DTS:LocaleID="5129"
   DTS:ObjectName="Harmoney_Transactions"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{84D48849-8B2D-4D66-A98D-E1BC4447AB4E}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{ECE2E83B-85D9-4A8B-94AD-B90D98352F4D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}"
+      DTS:ObjectName="AUKSQLPROD01 SNFLK_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=AUKSQLPROD01;Initial Catalog=SNFLK_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Email]"
+      DTS:CreationName="SMTP"
+      DTS:DTSID="{625246DE-B7C0-48D2-A28C-32EEDA439003}"
+      DTS:ObjectName="Email">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=AUKEXCH05;UseWindowsAuthentication=False;EnableSsl=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Harmoney_Transactions_FlatFile]"
       DTS:CreationName="FLATFILE"
@@ -1570,8 +1590,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\FileToStage\Stage Table.Connections[OleDbConnection]"
-                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerID="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerRefId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2133,8 +2153,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\StageToTarget\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerID="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerRefId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2634,8 +2654,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach Loop Container\StageToTarget\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{1F609CD7-D6B8-48DE-9137-6C3088888D28}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerID="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
+                      connectionManagerRefId="Package.ConnectionManagers[AUKSQLPROD01 SNFLK_STAGE]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3605,31 +3625,31 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="134,42"
+          Size="134.4,41.6"
           Id="Package\Foreach Loop Container\FileToStage"
           TopLeft="197.952380628002,192.019607857437" />
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\Foreach Loop Container\MoveFileToArchiveFolder"
           TopLeft="244.428568302369,567.666665511973" />
         <NodeLayout
-          Size="160,42"
+          Size="160,41.6"
           Id="Package\Foreach Loop Container\StageToTarget"
           TopLeft="141.238095157,362.68627428101" />
         <NodeLayout
-          Size="163,42"
+          Size="163.2,41.6"
           Id="Package\Foreach Loop Container\Truncate Stage Table"
           TopLeft="85,112" />
         <NodeLayout
-          Size="217,42"
+          Size="216.8,41.6"
           Id="Package\Foreach Loop Container\UpdateLog-StageIngestCount"
-          TopLeft="292,278" />
+          TopLeft="292,277.388235285538" />
         <NodeLayout
-          Size="202,42"
+          Size="201.6,41.6"
           Id="Package\Foreach Loop Container\UpdateLog-StartFileIngest"
           TopLeft="176.181818181818,23.7272727272727" />
         <NodeLayout
-          Size="187,42"
+          Size="187.2,41.6"
           Id="Package\Foreach Loop Container\UpdateLog-TargetLoad"
           TopLeft="208.428568302369,462.666665511973" />
         <EdgeLayout
@@ -3668,30 +3688,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 1]"
-          TopLeft="264.952380628002,234.019607857437">
+          TopLeft="265.152380628002,233.619607857437">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="135.547619371998,43.980392142563"
+              EndConnector="135.247619371998,43.7686274281008"
               Start="0,0"
-              End="135.547619371998,36.480392142563">
+              End="135.247619371998,36.2686274281008">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.9901960712815" />
+                    End="0,17.8843137140504" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.9901960712815"
-                    Point2="0,21.9901960712815"
-                    Point3="4,21.9901960712815" />
+                    Point1="0,17.8843137140504"
+                    Point2="0,21.8843137140504"
+                    Point3="4,21.8843137140504" />
                   <mssgle:LineSegment
-                    End="131.547619371998,21.9901960712815" />
+                    End="131.247619371998,21.8843137140504" />
                   <mssgle:CubicBezierSegment
-                    Point1="131.547619371998,21.9901960712815"
-                    Point2="135.547619371998,21.9901960712815"
-                    Point3="135.547619371998,25.9901960712815" />
+                    Point1="131.247619371998,21.8843137140504"
+                    Point2="135.247619371998,21.8843137140504"
+                    Point3="135.247619371998,25.8843137140504" />
                   <mssgle:LineSegment
-                    End="135.547619371998,36.480392142563" />
+                    End="135.247619371998,36.2686274281008" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3702,30 +3722,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint 2]"
-          TopLeft="400.5,320">
+          TopLeft="400.4,318.988235285538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-179.261904843,42.68627428101"
+              EndConnector="-179.161904843,43.6980389954722"
               Start="0,0"
-              End="-179.261904843,35.18627428101">
+              End="-179.161904843,36.1980389954722">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.343137140505" />
+                    End="0,17.8490194977361" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.343137140505"
-                    Point2="0,21.343137140505"
-                    Point3="-4,21.343137140505" />
+                    Point1="0,17.8490194977361"
+                    Point2="0,21.8490194977361"
+                    Point3="-4,21.8490194977361" />
                   <mssgle:LineSegment
-                    End="-175.261904843,21.343137140505" />
+                    End="-175.161904843,21.8490194977361" />
                   <mssgle:CubicBezierSegment
-                    Point1="-175.261904843,21.343137140505"
-                    Point2="-179.261904843,21.343137140505"
-                    Point3="-179.261904843,25.343137140505" />
+                    Point1="-175.161904843,21.8490194977361"
+                    Point2="-179.161904843,21.8490194977361"
+                    Point3="-179.161904843,25.8490194977361" />
                   <mssgle:LineSegment
-                    End="-179.261904843,35.18627428101" />
+                    End="-179.161904843,36.1980389954722" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3839,7 +3859,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="796,665"
+          PanelSize="796,664.8"
           Size="796,708"
           Id="Package\Foreach Loop Container"
           TopLeft="60,59" />
